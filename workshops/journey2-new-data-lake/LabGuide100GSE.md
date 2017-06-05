@@ -1,230 +1,124 @@
 
-![](images/100/Picture100-lab.png)  
 Updated: June 5, 2017
 
 ## Introduction
 
-This is the first of several labs that are part of the **Oracle Public Cloud Big Data Journey workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
+Oracle offers a set of Big Data Journeys to help users get started using Oracle Cloud services with a purpose.  These journeys are available to everyone at `http://www.oracle.com/bigdatajourney`
 
-This is a guide to help Oracle Sales Consultants provision an environment in GSE Demo Central.
+Oracle Solution Engineers may use these journeys to build hands-on technical skills with Oracle Big Data Cloud Services.  Additionally, Solution Engineers may use the journeys to work collaboratively with customers.
+Demo Central – powered by Oracle Global Solution Engineering (GSE) - offers a MetCS (Metered Cloud Service) Stack of preconfigured cloud services in the Oracle Public Cloud for Solutions Engineers to use for workshops, demonstrations and proof of concepts.
+As of the date of this publication, a GSE engineer must manually configure a demo environment that has all cloud services necessary to run Big Data Journeys
 
-You will take on 3 Personas during the workshop. The **Project Manager Persona** will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The Java Developer persona will develop a new twitter feed service that will allow for retrieval and filtering of twitter data. The **JavaScript Developer** persona will develop a new Twitter Marketing UI that will display the twitter data to allow for analysis.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
+This guide is intended to help Oracle Solution Engineers set up an Oracle Big Data Cloud Service – Compute Edition environment in Demo Central so they may run through the Big Data Journeys available for clients and prospects
 
-Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
+# Steps
+- Register a Demo with Demo Central
+- Launch the Demo Environment
+- Customize Your Dashboard to Display Additional Services
+- Verify the Storage Cloud Service and Storage Container are Created
+- Verify the Big Data Cloud Service – Compute Edition Service is Created
+- Begin Your Big Data Journey
 
-## Objectives
-- Create Initial Project
-    - Add Users to Project
-- Create Product Issues
-    - Create Issues for Twitter Feed Microservice
-    - Create Issues for Twitter Feed Marketing UI
-- Create Agile Board and initial Sprint
-- Add Issues to Sprint
+## Register a Demo with Demo Central
+1)	Visit Demo Central at `http://demo.oracle.com`
+2)	Click “Demos” tab
+3)	Click “Register a Demo” button
+4)	Search for “Big Data Cloud Service Compute Edition (BDCS CE) with Zeppelin”
+5)	Complete the Demo Registration form using the following values:
+-	Demo Purpose: “Personal Learning”
+-	Description/Comments: “Walk through Big Data Journeys”
+-	Demo Resource Request Type: “A new Deal Server Environment”	
+-	Activity Start Date:  <your start date>
+-	Activity End Date:  <your end date>
+-	Demo Date(s):  <your demo date>
 
-## Required Artifacts
-- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
+![](images/100GSE/picture-01.png)  
 
+6)	Click “Next” button
+7)	Select “Horizontal (NOT Industry-Specific)”
+8)	Check the “Big Data - Compute Edition” checkbox
 
-# Create Twitter Feed Marketing Project
+![](images/100GSE/picture-02.png)  
 
-## Create Developer Cloud Service Project
+9)	Click “Next” button
+10)	Click “Submit” button
+11)	You will automatically receive an email notification like the one below:
 
-### **STEP 1**: Login to your Oracle Cloud Account
-- From any browser, go to the URL:
-    `https://cloud.oracle.com`
+![](images/100GSE/picture-03.png)  
 
-- click **Sign In** in the upper right hand corner of the browser
+**Please note:  Your demo instance is NOT automatically provisioned at this point!!**!  You will be notified when your environment is ready – typically 2-4 hours after your demo registration - when you receive an email like the following:
+![](images/100GSE/picture-04.png)  
 
-    ![](images/100/Picture100-1.png)
+## Launch the Demo Environment
+1)	Visit Demo Central at `http://demo.oracle.com`
+2)	Click “Demos” tab
+3)	Click “Launch Demo” link next to the registration that id that was provisioned for you.  (Note: your environment name will be unique to your demo registration)
+![](images/100GSE/picture-05.png)  
 
-- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
+4)	Note the usernames and passwords assigned to your environment
+![](images/100GSE/picture-06.png)  
 
-    ![](images/100/Picture100-2.png)
+5)	Click “Login in to Cloud Service Dashboard” link
+6)	Login using the following credentials:
+-	User: cloud.admin
+-	Password: <your cloud.admin user password>
 
-- Enter your identity domain and click **Go**.
 
-    **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or Trial confirmation email.
+## Customize Your Dashboard to Display Additional Services
+The “Big Data – Compute Edition” and “Event Hub – Dedicated Cloud Services” are NOT displayed by default on your Services Dashboard.  Follow these steps to display these services on your dashboard
+![](images/100GSE/picture-07.png)  
 
-    ![](images/100/Picture100-3.png)
+Scroll down and click “Show” for both “Event Hub – Dedicated” and “Big Data – Compute Edition” Services
+![](images/100GSE/picture-08.png) 
 
-- Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
+## Verify the Storage Cloud Service and Storage Container are Created
+After logging in, you are directed to the My Services Dashboard.  
 
-  **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. Although you are assuming the identify of Lisa Jones, you will log into the account using the **username** provided to you by your instructor, given to you by your corporation, or supplied to you as part of an Oracle Trial. As you progress through the workshop, you will remain logged in as a single user, but you will make “logical” changes from Lisa Jones the Project Manager to other personas.
+Click the “Storage” link to get to the Service Details for Oracle Storage Cloud Service
+![](images/100GSE/picture-09.png) 
 
-    ![](images/lisa.png)
+Note your Identity Domain
 
-    ![](images/100/Picture100-3.5.png)
+Click on the “Open Service Console” button
+![](images/100GSE/picture-10.png) 
 
-- You will be presented with a Dashboard displaying the various cloud services available to this account.
+Note that the “BDCSCE” container has already been created for you. 
 
-    ![](images/100/Picture100-4.png)
+Also note in the upper left it says something like “Storage-gse0002004”.  You will use info this when you provision BDCS-CE.
+![](images/100GSE/picture-11.png)
 
-- If all your services are not visible, **click** on the **Customize Dashboard**, you can add services to the dashboard by clicking **Show.** For this workshop, you will want to ensure that you are showing at least the **Application Container, Developer and Storage** cloud services. If you do not want to see a specific service, click **Hide**
+Click “My Services” to go back to your Cloud Services Dashboard
 
-    ![](images/100/Picture100-5.png)
+## Verify the Big Data Cloud Service – Compute Edition Service is Created
+Click the “Big Data – Compute Edition” link to get to the Service Details for Oracle Big Data Cloud Service – Compute Edition
+![](images/100GSE/picture-12.png)
 
-### **STEP 2**: Check/Set Storage Replication Policy
+Note your Identity Domain
 
-Depending on the state of your Cloud Account, you may need to set the replication policy, if it has not been previously set. In this step you will got to the Storage Cloud Service to check on the status of the Replicaton Policy. 
+Click on the “Open Service Console”
+![](images/100GSE/picture-13.png)
 
-- Click on the **Storage** Cloud Service
+Note that the “myBDCSCE” service has already been created for you
+![](images/100GSE/picture-14.png)
 
-    ![](images/100/Picture-01.png)
+Click on the ![](images/100GSE/picture-15.png)  icon next the myBDCSCE service, followed by Big Data Cluster Console
 
-- If you see a message requesting that you **Set Replication Policy** as is shown below, click on the message. If the message is not displayed, your replicatin policy has already been set and you can continue to the next step by clicking on the **Dashboard** icon in the top right corner of the page.
+![](images/100GSE/picture-16.png)
 
-    ![](images/100/Picture-02.png)
+Log in using the following credentials
+- User: bdcsce_admin
+- Password: Welcome321
+![](images/100GSE/picture-17.png)
 
-- Care must be taking when setting your replication policy, because it cannot be changed. With Trial accounts, the first option available will generatlly set the replication policy sufficient for this workshop, so we will take the Default, and click on the **Set** button. 
+## Begin Your Big Data Journey
+Visit `http://www.oracle.com/bigdatajourney` and register with your email address
 
-    ![](images/100/Picture-03.png)
+Click the ![](images/100GSE/picture-18.png)  button
 
-- Click on the **Dashboard** button
+At this point, you can use the pre-created “myBDCSCE” instance and start with The New Data Lake Workshop: Module 3
 
-    ![](images/100/Picture-04.png)
+OR
 
-### **STEP 3**: Login to Developer Cloud Service
+You can optionally follow the instructions in The New Data Lake Workshop:  Module 2 and create a new BDCSCE instance on your own. 
 
-Oracle Developer Cloud Service provides a complete development platform that streamlines team development processes and automates software delivery. The integrated platform includes an issue tracking system, agile development dashboards, code versioning and review platform, continuous integration and delivery automation, as well as team collaboration features such as wikis and live activity stream. With a rich web based dashboard and integration with popular development tools, Oracle Developer Cloud Service helps deliver better applications faster.
-
-- From the Cloud UI dashboard click on the **Developer** service. In our example, the Developer Cloud Service is named **developer99019**.
-
-    ![](images/100/Picture100-6.png)
-
-- The Service Details page gives you a quick glance of the service status overview.
-
-    ![](images/100/Picture100-7.png)
-
-- Click **Open Service Console** for the Oracle Developer Cloud Service. The Service Console will then list all projects for which you are currently a member.
-
-    ![](images/100/Picture100-7.5.png)
-
-### **STEP 4**: Create Developer Cloud Service Project
-
-- Click **New Project** to start the project create wizard.
-
-    ![](images/100/Picture100-8.png)
-
-- On Details screen enter the following data and click on **Next**.
-
-    **Name:** `Twitter Feed Marketing Project`
-
-    **Description:** `Project to gather and analyze twitter data`
-
-    **Note:** A Private project will only be seen by you. A Shared project will be seen by all Developer Cloud users. In either case, users need to be added to a project in order to interact with the project.
-
-    ![](images/100/Picture100-9.png)
-
-- Leave default template set to **Empty Project** and click **Next**
-
-    ![](images/100/Picture100-10.png)
-
-- Select your **Wiki Markup** preference to **MARKDOWN** and click **Finish**.
-
-    ![](images/100/Picture100-11.png)
-
-- The Project Creation will take about 1 minute.
-
-    ![](images/100/Picture100-12.png)
-
-- You now have a new project, in which you can manage your software development.
-
-    ![](images/100/Picture100-13.png)
-
-
-
-# Create Product Issues
-
-## Create Issues for Twitter Feed Microservice
-
-### **STEP 5**: Create Issue for the initial GIT Repository Creation
-
-In this step you are still assuming the identity of the Project Manager, ***Lisa Jones***.
-
-![](images/lisa.png)
-
-- Click **Issues** on left hand navigation panel to display the Track Issues page.
-
-    ![](images/100/Picture100-16.png)
-
-- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
-
-    **Note:** Throughout the lab you will assign your own account as the “physical” owner of the issue, but for the sake of this workshop, **Bala Gupta** will be the “logical” owner of the following issues.
-
-    ![](images/bala.png)
-
-    **Summary:**
-    `Create Initial GIT Repository for Twitter Feed Service`
-
-    **Description:**
-    `Create Initial GIT Repository for Twitter Feed Service`
-
-    **Type:** `Task`
-
-    **Owner:** `Select your account provided in the dropdown [Logical Owner: Bala Gupta]`
-
-    **Story Points:** `1`
-
-    Note: Story point is an arbitrary measure used by Scrum teams. They are used to measure the effort required to implement a story. This [Site](https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/) will provide more information. 
-
-    ![](images/100/Picture100-17.png)
-
-### **STEP 6**: Create Issue for Update Twitter Credentials
-
-- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
-
-    ![](images/bala.png)
-
-    **Summary:** `Create Filter on Twitter Feed`
-
-    **Description:** `Create Filter to allow user to supply text to reduce the amount of data returned by the Twitter feed`
-
-    **Type:** `Feature`
-
-    **Owner:** `Select your account provided in the dropdown [Logical Owner: Bala Gupta]`
-
-    **Story Points:** `2`
-
-    ![](images/100/Picture100-18.png)
-
-### **STEP 7**: Create Issue for initial GIT Repository creation
-
-- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**. Note: The next two issues will logically be owned by John Dunbar.
-
-    ![](images/john.png)
-
-    **Summary:** `Create Initial GIT Repository for Twitter Feed Marketing UI`
-
-    **Description:** `Create Initial GIT Repository for Twitter Feed Marketing UI`
-
-    **Type:** `Task`
-
-    **Owner:** `Select your account provided in the dropdown [Logical Owner: John Dunbar]`
-
-    **Story Points:** `1`
-
-    ![](images/100/Picture100-19.png)
-
-### **STEP 8**: Create Issue for Displaying Twitter Feed
-
-- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
-
-    ![](images/john.png)
-
-    **Summary:** `Display Twitter Feed in Table Format`
-
-    **Description:** `Display Twitter Feed in Table Format`
-
-    **Type:** `Feature`
-
-    **Owner:** `Select account provided in the dropdown [Logical Owner: John Dunbar]`
-
-    **Story Points:** `2`
-
-    ![](images/100/Picture100-20.png)
-
-- Click the back arrow ![](images/100/Picture100-21.png) on the **left side** of the window, or click on the **Issues** menu option to view all newly created issues.
-
-    ![](images/100/Picture100-22.png)
-
-
+![](images/100GSE/picture-19.png)
