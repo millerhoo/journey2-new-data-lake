@@ -1,5 +1,5 @@
-![](images/300/Picture-lab.png)  
-Updated: June 9, 2017
+![](images/300/300.JPG)  
+Updated: June 16, 2017
 
 ## Introduction
 
@@ -49,7 +49,7 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 ### **STEP 3**: Launch the Big Data Cluster Console
 
-- Need an image here.  Talk about certificates.  Use the un/pw you defined earlier.  If you are using a GSE, the un/pw will be set to ........
+- Need an image here.  Talk about certificates.  Use the un/pw you defined earlier when you created the BDCS-CE instance.  If you are an Oracle Employee/Partner using a GSE "deal server" pre-provisioned environment, the un/pw will be set to bdcsce_admin/Welcome321
 
 
 ## Import the Tutorial Notes into the BDCS-CE Notebook
@@ -80,7 +80,7 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 - The paragraphs of the note are displayed. 
 
-Please walk through the paragraphs one by one. Read through the content of the paragraphs as you get to them. There is much useful information that in the paragraphs that is not reproduced into these instructions.
+Please walk through the paragraphs one by one. Read through the content of the paragraphs as you get to them. There is much useful information in the paragraphs that is not reproduced into these instructions.
 
 
 ## Open and run the second Tutorial note in the notebook
@@ -93,7 +93,7 @@ Please walk through the paragraphs one by one. Read through the content of the p
 
 - The paragraphs of the note are displayed. 
 
-Please walk through the paragraphs one by one. Read through the content of the paragraphs as you get to them. There is much useful information that in the paragraphs that is not reproduced into these instructions.
+Please walk through the paragraphs one by one. Read through the content of the paragraphs as you get to them. There is much useful information in the paragraphs that is not reproduced into these instructions.
 
 **Pay attention to the instructions in Tutorial 2.  They will ask you to do a few steps outside of the notebook.  These steps need to be completed for the remaining tutorials to work properly.**
 
