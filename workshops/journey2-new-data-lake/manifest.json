@@ -1,7 +1,7 @@
 {
     "workshop": {
-        "title": "Workshop Title",
-        "description": "Description of this workshop.",
+        "title": "Big Data Journey: New Data Lake",
+        "description": "This workshop will show you how to build your New Data Lake in the Oracle Public Cloud.",
         "theme": "default",
         "interactive":"https://launch.oracle.com/?cloudnative",
         "labs": [
@@ -20,20 +20,26 @@
             {
                 "number": "100",
                 "filename": "LabGuide100.md",
-                "title": "Lab 100: Agile Project Management",
-                "description": "Use Developer Cloud Service to create issues, tasks, and sprints"
+                "title": "Lab 100: Sign Up for the Oracle Public Cloud Trial",
+                "description": "Instructions to sign-up for a free trial of Oracle Public Cloud services"
+            },
+            {
+                "number": "100GSE",
+                "filename": "LabGuide100GSE.md",
+                "title": "Lab 100GSE: ALTERNATE VERSION of Lab100 for Oracle Employees",
+                "description": "Oracle Employee instructions to get access to an Oracle Public Cloud demo environment"
             },
             {
                 "number": "200",
                 "filename": "LabGuide200.md",
-                "title": "Lab 200:  Title of Lab 200",
-                "description": "Short description of lab 200"
+                "title": "Lab 200:  Provisioning Oracle Storage Cloud and Oracle Big Data Cloud Service-Compute Edition",
+                "description": "Instructions to provision the Oracle Storage Cloud and BDCS-CE in your Oracle Public Cloud identity domain"
             },
             {
                 "number": "300",
                 "filename": "LabGuide300.md",
-                "title": "Lab 300:  Title of Lab 300",
-                "description": "Short description of lab 300"
+                "title": "Lab 300:  Getting to know BDCS-CE",
+                "description": "This lab will help you get to know BDCS-CE.  It will use the Notebook component and show you how to use the key features you'll need as you build your New Data Lake."
             },
             {
                 "number": "400",
