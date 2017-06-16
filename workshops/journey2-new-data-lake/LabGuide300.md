@@ -39,32 +39,33 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 ## Connect to the BDCS-CE Console
 
-### **STEP 1**: Navigate/login to the Oracle Cloud My Services web page  
+### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 
-- Need an image here
+- ![](images/300/snap0011988.jpg) 
 
 ### **STEP 2**: Navigate to the My Services page for your BDCS-CE cluster
 
-- Need an image here.  
+- ![](images/300/snap0011989.jpg)  
 
 ### **STEP 3**: Launch the Big Data Cluster Console
 
-- Need an image here.  Talk about certificates.  Use the un/pw you defined earlier when you created the BDCS-CE instance.  If you are an Oracle Employee/Partner using a GSE "deal server" pre-provisioned environment, the un/pw will be set to bdcsce_admin/Welcome321
-
+- Launch the Big Data Cluster Console for your BDCS-CE cluster.  If this is your first time, you will likely need to allow your browser to accept the self-signed certificate for the web console application.
+- You will be asked to provide a username/password.  Use the username and password you defined earlier when you created the BDCS-CE instance (the username defaults to bdcsce_admin).  If you are an Oracle Employee/Partner using a GSE "deal server" pre-provisioned environment, the un/pw will be set to bdcsce_admin/Welcome321
+  ![](images/300/firstLogin.gif)
 
 ## Import the Tutorial Notes into the BDCS-CE Notebook
 
 ### **STEP 1**: Navigate to the Notebook tab  
 
-- Need an image here
 
 ### **STEP 2**: Click Import Note.  Browse your workstation to import the first tutorial .json file.
 
-- Need an image here.  Talk about how you downloaded and unzipped this above.
+- The .json files were downloaded and unzipped earlier in this lab.
+![](images/300/importNote.gif)
 
 ### **STEP 3**: Repeat the above for the other Tutorial .json files in the zip
 
-- Need an image here.  Discuss how there are also a few demonstration notebooks in the zip file, too.
+- In addition, there are some demonstration notes you can import as well.
 
 
 
@@ -74,7 +75,7 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 ### **STEP 1**: Click on the Notebook tab.  Then click on Tutorial 1 to open it. 
 
-- image here
+- ![](images/300/snap0011990.jpg) 
 
 ### **STEP 2**: Read and follow the instructions in Tutorial 1
 
@@ -87,7 +88,7 @@ Please walk through the paragraphs one by one. Read through the content of the p
 
 ### **STEP 1**: Click on the Notebook tab.  Then click on Tutorial 2 to open it. 
 
-- image here
+- ![](images/300/snap0011991.jpg) 
 
 ### **STEP 2**: Read and follow the instructions in Tutorial 2
 
@@ -101,7 +102,7 @@ Please walk through the paragraphs one by one. Read through the content of the p
 
 ### **STEP 1**: Click on the Notebook tab.  Then click on Tutorial 3 to open it. 
 
-- image here
+- ![](images/300/snap0011992.jpg) 
 
 ### **STEP 2**: Read and follow the instructions in Tutorial 3
 
@@ -115,7 +116,7 @@ Please walk through the paragraphs one by one. Read through the content of the p
 
 ### **STEP 1**: Click on the Notebook tab.  Then click on Tutorial 4 to open it. 
 
-- image here
+- ![](images/300/snap0011993.jpg) 
 
 ### **STEP 2**: Read and follow the instructions in Tutorial 4
 
@@ -123,7 +124,7 @@ Please walk through the paragraphs one by one. Read through the content of the p
 
 ### **STEP 3**: Click on the Notebook tab.  Then click on Tutorial 5 to open it. 
 
-- image here
+- ![](images/300/snap0011994.jpg) 
 
 ### **STEP 4**: Read and follow the instructions in Tutorial 5
 
@@ -137,7 +138,7 @@ Please walk through the paragraphs one by one. Read through the content of the p
 
 ### **STEP 1**: Click on the Notebook tab.  Then click on Tutorial 6 to open it. 
 
-- image here
+- ![](images/300/snap0011995.jpg) 
 
 ### **STEP 2**: Read and follow the instructions in Tutorial 6
 
@@ -145,7 +146,7 @@ Please walk through the paragraphs one by one. Read through the content of the p
 
 ### **STEP 3**: Click on the Notebook tab.  Then click on Tutorial 7 to open it. 
 
-- image here
+- ![](images/300/snap0011996.jpg) 
 
 ### **STEP 4**: Read and follow the instructions in Tutorial 7
 
@@ -158,7 +159,7 @@ Please walk through the paragraphs one by one. Read through the content of the p
 
 ### **STEP 1**: Click on the Notebook tab.  Then click on Tutorial 8 to open it. 
 
-- image here
+- ![](images/300/snap0011997.jpg) 
 
 ### **STEP 2**: Read and follow the instructions in Tutorial 8
 
