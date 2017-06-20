@@ -55,14 +55,14 @@ You will learn how to populate and analyze your data lake based on Object Storag
 - Request a GSE Deal Server environment
 - How to access the GSE Deal Server environment when ready
 
-## Lab 200: Provisioning Oracle Storage Cloud and Big Data Cloud Service - Compute Edition
+## Lab 200: Provisioning Big Data Cloud Service - Compute Edition
 
 **Documenation**: [LabGuide200.md](LabGuide200.md)
 
 **Objectives**:
 
-- Provision Oracle Storage Cloud instance
 - Provision Oracle Big Data Cloud Service - Compute Edition instance
+- How to connect to your BDCS-CE instance via SSH
 
 ## Lab 300: Getting to know BDCS-CE
 

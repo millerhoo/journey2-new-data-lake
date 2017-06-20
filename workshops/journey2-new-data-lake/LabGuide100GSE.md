@@ -1,4 +1,5 @@
 ![](images/100GSE/100GSE.JPG) 
+
 Updated: June 5, 2017
 
 ## Introduction
@@ -115,10 +116,8 @@ Visit `http://www.oracle.com/bigdatajourney` and register with your email addres
 
 Click the ![](images/100GSE/picture-18.png)  button
 
-At this point, you can use the pre-created “myBDCSCE” instance and start with The New Data Lake Workshop: Module 3
+At this point, you can use the pre-created “myBDCSCE” instance and start with [LabGuide300.md](LabGuide300.md)
 
 OR
 
-You can optionally follow the instructions in The New Data Lake Workshop:  Module 2 and create a new BDCSCE instance on your own. 
-
-![](images/100GSE/picture-19.png)
+You can optionally follow the instructions in [LabGuide200.md](LabGuide200.md) and create a new BDCSCE instance on your own. 

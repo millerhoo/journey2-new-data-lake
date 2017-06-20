@@ -5,7 +5,7 @@ Updated: June 20, 2017
 ## Introduction
 Oracle offers a set of Big Data Journeys to help users get started using Oracle Cloud services with a purpose.  These journeys are available to everyone at [http://www.oracle.com/bigdatajourney](http://www.oracle.com/bigdatajourney)
 
-**If you are an Oracle Employee/Partner with access to GSE (demo.oracle.com), you should follow the alternate Lab 100GSE instructions available here: [Lab 100GSE](LabGuide100GSE.md)**
+**If you are an Oracle Employee/Partner with access to GSE (demo.oracle.com), you should follow the alternate Lab 100GSE instructions available here: [LabGuide100GSE.md](LabGuide100GSE.md)**
 
 
 # Oracle Trial Account
@@ -141,4 +141,4 @@ Depending on the state of your Cloud Account, you will need to set the **Replica
 
 # Next Steps
 
-Proceed to [Lab 200](LabGuide200.md) to provision your BDCS-CE instance.
+Proceed to [LabGuide200.md](LabGuide200.md) to provision your BDCS-CE instance.
