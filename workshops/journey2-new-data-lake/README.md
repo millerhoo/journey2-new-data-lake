@@ -1,18 +1,19 @@
 
 # Big Data Journey: New Data Lake Workshop
+Oracle offers a set of Big Data Journeys to help users get started using Oracle Cloud services with a purpose. This particular journey is designed to show you techniques you can use as part of the **New Data Lake**.
 
-Oracle believes Object Storage is the new analytics data lake. You will learn how to populate and analyze your data lake based on Object Storage from a variety of file and streaming sources. You will also learn how to execute real-time and batch processing with Oracle’s managed Spark and Kafka cloud services.
+You will learn how to populate and analyze your data lake based on Object Storage from a variety of file and streaming sources. You will also learn how to execute real-time and batch processing with Oracle’s managed Spark and Kafka cloud services.
 
-Goals
+## Goals
 
  - Get comfortable with Oracle's public cloud services
  - Learn a repeatable way to integrate cloud data sources and build reports
  - Provide a channel to ask the experts questions
- - See what other organizations are doing to enable their business users
+ - See techniques and patterns other organizations are using to enable their business users
 
 **To see a video overview of the New Data Lake, watch this link:** [Video](http://www.youtube.com/embed/Sj-PlJ-w1jA?rel=0?iframe=true&width=680&height=450)
 
-## To learn more ##
+## To learn more
  - [Big Data Cloud Service - Compute Edition (BDCS-CE)](https://cloud.oracle.com/big-data-compute-edition)
  - [Event Hub Cloud Service (OEHCS)](https://cloud.oracle.com/en_US/event-hub)
  - [Storage Cloud Service Object Store](https://cloud.oracle.com/en_US/storage)
@@ -41,7 +42,7 @@ Goals
 
 **Documenation**: [LabGuide100.md](LabGuide100.md)
 
-### Objectives
+**Objectives**:
 
 - Signup for a Oracle Cloud Trial
 
@@ -49,7 +50,7 @@ Goals
 
 **Documenation**: [LabGuide100GSE.md](LabGuide100GSE.md)
 
-### Objectives
+**Objectives**:
 
 - Request a GSE Deal Server environment
 - How to access the GSE Deal Server environment when ready
@@ -58,7 +59,7 @@ Goals
 
 **Documenation**: [LabGuide200.md](LabGuide200.md)
 
-### Objectives
+**Objectives**:
 
 - Provision Oracle Storage Cloud instance
 - Provision Oracle Big Data Cloud Service - Compute Edition instance
@@ -67,7 +68,7 @@ Goals
 
 **Documenation**: [LabGuide300.md](LabGuide300.md)
 
-### Objectives
+**Objectives**:
 
 - Accessing your BDCS-CE instance
 - Working with Zeppelin Notebooks
@@ -79,7 +80,7 @@ Goals
 
 **Documenation**: [LabGuide400.md](LabGuide400.md)
 
-### Objectives
+**Objectives**:
 
 - Provisioning the OEHCS Platformn instance
 - Creating your first OEHCS topic
@@ -88,10 +89,11 @@ Goals
 
 **Documenation**: [LabGuide500.md](LabGuide500.md)
 
-### Objectives
+**Objectives**:
 
 - Configuring Access between BDCS-CE and OEHCS instances
 - Writing a Producer for OEHCS in Zeppelin
 - Writing a Spark Streaming Consumer for OEHCS
 - Use Spark SQL with Streaming data
 - Writing Streaming data to the Object Store
+- Updating a Live Map with Streaming Data
