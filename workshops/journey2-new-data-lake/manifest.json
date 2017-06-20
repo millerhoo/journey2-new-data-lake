@@ -12,12 +12,6 @@
                 "description": "Step-by-step workshop instructions"
             },
             {
-                "number": "0",
-                "filename": "StudentGuide.md",
-                "title": "Student Guide",
-                "description": "Workshop guidance and prerequisites"
-            },
-            {
                 "number": "100",
                 "filename": "LabGuide100.md",
                 "title": "Lab 100: Sign Up for the Oracle Public Cloud Trial",
@@ -52,6 +46,12 @@
                 "filename": "LabGuide500.md",
                 "title": "Lab 500: Getting to know Oracle Event Hub Cloud Service and Spark Streaming",
                 "description": "This lab will help you get to know OEHCS.  It will use the Zeppelin notebook from your BDCS-CE instance and show you how to write consumers and producers for OEHCS."
+            },
+            {
+                "number": "9999",
+                "filename": "Cleanup.md",
+                "title": "Cleanup",
+                "description": "Instructions to cleanup your cloud service environment."
             }
             
         ]
