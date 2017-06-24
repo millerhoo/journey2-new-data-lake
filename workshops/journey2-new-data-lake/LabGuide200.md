@@ -57,7 +57,7 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 - ![](images/200/BDCScreate1.gif)  
 
 
-### **STEP 6**: In the Credentials section, choose **Full** for the Deployment Profile and choose **1** for the Number of Nodes.
+### **STEP 6**: In the Credentials section, define your SSH public key and the desired username/password to use for the BDCS-CE cluster administrator.
 
 - SSH Public Key: Define a value for a VM Public Key, use a file with a VM Public Key or create a new key. The easiest choice if new to this environment may be to create a new key. Choose to Create a New Key and hit the Enter button.   Once you hit Enter, a File Folder Window will pop up to allow you to control where on your local computer you wish to store your SSH Key file (ex: sshkeybundle.zip).  Make sure and write down the location of this SSH key file.   The SSH Public Key field will then get filled in automatically.
 = Administrative User: Define the user id for the administration user for your instance. (We suggest you leave it at its default: bdcsce_admin)
@@ -85,6 +85,9 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 - As of 17.2.5, it can take about 15-20 minutes.
 - ![](images/200/snap0012023.jpg)  
 
+### **STEP 12**: When the BDCS-CE instance is provisioned, click on the name of the instance to go to the Service Overview page.
+
+- ![](images/200/BDCSpostcreate.gif)  
 
 ## XXXXXXXX  Page 17
 
