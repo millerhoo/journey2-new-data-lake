@@ -89,6 +89,17 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 - ![](images/200/BDCSpostcreate.gif)  
 
+### **STEP 13**: Review the details on the Service Overview Page
+While your instance is being created the status will be “Creating service”.   Once the new Cloud Service instance changes its status to Ready, you can then click on the hyperlink with your Service name and you can look at the details of your new Service.  Sections include:
+- Overview – displays the number of nodes
+- Administration – displays if there are any patches available.
+- Services Overview – displays summary information of the new Big Data Cloud Service.  This includes the Ambari Server Host whose IP address you can use to access Ambari from a URL in a browser.  As well as highlighting the Administrative user you created as well as the Cloud Storage Container and the Spark Thrift Server (part of the default configuration).  Ambari is a Hadoop management web UI that can accessed through your Ambari Host Server IP address and port 8080 (ex:  http://xxx.xxx.xxx.xxx:8080), then use your admin username and password to log in. 
+- Resources – displays information on the resources associated with your Service.  As you scale out and add more nodes, the new nodes as well as their Public IP address, OCPUs, Memory and Storage will be displayed.
+- Associations – displays information on any additional resources associated with your Service. 
+- ![](images/200/snap0012055.jpg)  
+
+
+### **STEP 14**: 
 ## XXXXXXXX  Page 17
 
 
