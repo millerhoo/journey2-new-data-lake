@@ -34,13 +34,13 @@ The New Data Lake workshop will use a series of tutorials running in Zeppelin No
       
 ## How to View the Lab Guides
 
-- The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://millerhoo.github.io/journey2-new-data-lake/workshops/journey2-new-data-lake/index.html) 
+- The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/journey2-new-data-lake/) 
 
 - Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
 
     ![](images/WorkshopMenu.png)  
 
-- To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/millerhoo/journey2-new-data-lake/tree/master/workshops/journey2-new-data-lake) repository.
+- To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/oracle/learning-library/tree/master/workshops/journey2-new-data-lake) repository.
 
 - Visit the [Workshop Interactive Labguide](http://launch.oracle.com/?cloudnative) for a visual overview of the workshop content. 
 

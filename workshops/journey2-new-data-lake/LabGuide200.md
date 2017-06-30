@@ -1,14 +1,9 @@
 ![](images/200/200.JPG)  
 
-Updated: June 20, 2017
+Updated: June 30, 2017
 
-## WORK IN PROGRESS
 
-Lab 200 is not yet ready in this format.
-
-For now follow pages 4 to 24 of this document: http://www.oracle.com/partners/en/most-popular-resources/journey2-module2-3702610.pdf
-
-Note: if you are an Oracle employee following the Lab100GSE instructions to use a GSE Deal Server, you can skip this lab and move to lab 300.
+    Note: if you are an Oracle employee following the Lab100GSE instructions to use a GSE Deal Server, you can skip this lab and move to lab 300.
 
 
 ## Introduction
@@ -82,38 +77,38 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 ### **STEP 11**: Wait for the BDCS-CE instance to be provisioned.
 
 - While being provisioned, the Status will say "Creating service".  You can click on the status to get more information.
-- As of 17.2.5, it can take about 15-20 minutes.
+- As of 17.2.5, it can take about 15-20 minutes to finish creating the service.
 - ![](images/200/snap0012023.jpg)  
 
 ### **STEP 12**: When the BDCS-CE instance is provisioned, click on the name of the instance to go to the Service Overview page.
-
-- ![](images/200/BDCSpostcreate.gif)  
+- ![](images/200/snap0012069.jpg)  
 
 ### **STEP 13**: Review the details on the Service Overview Page
-While your instance is being created the status will be “Creating service”.   Once the new Cloud Service instance changes its status to Ready, you can then click on the hyperlink with your Service name and you can look at the details of your new Service.  Sections include:
-- Overview – displays the number of nodes
+Sections include:
+- Overview – displays the number of nodes, aggregate OCPU, Memory, and Storage
 - Administration – displays if there are any patches available.
-- Services Overview – displays summary information of the new Big Data Cloud Service.  This includes the Ambari Server Host whose IP address you can use to access Ambari from a URL in a browser.  As well as highlighting the Administrative user you created as well as the Cloud Storage Container and the Spark Thrift Server (part of the default configuration).  Ambari is a Hadoop management web UI that can accessed through your Ambari Host Server IP address and port 8080 (ex:  http://xxx.xxx.xxx.xxx:8080), then use your admin username and password to log in. 
+- Services Overview – displays summary information of the new Big Data Cloud Service.  This includes the Ambari Server Host whose IP address you can use to access Ambari from a URL in a browser.  As well as highlighting the Administrative user you created as well as the Cloud Storage Container and the Spark Thrift Server (part of the default configuration).  Ambari is a Hadoop management web UI that can accessed through your Ambari Host Server IP address and port 8080 (ex:  http://xxx.xxx.xxx.xxx:8080).  Note: to use Ambari, you will need to enable a Network Access rule for port 8080.  Also, your Ambari credentials will be your BDCS-CE username and password you defined when you created this instance. 
 - Resources – displays information on the resources associated with your Service.  As you scale out and add more nodes, the new nodes as well as their Public IP address, OCPUs, Memory and Storage will be displayed.
 - Associations – displays information on any additional resources associated with your Service. 
-- ![](images/200/snap0012055.jpg)  
 
 
-### **STEP 14**: 
-## XXXXXXXX  Page 17
+### **STEP 14**: Review the Access Rules for your cluster
+For now, you don't need to make changes.  In a later tutorial, we will use this to allow SSH access.  This is also the place where you can enable Ambari access (port 8080) which is disabled by default.
+- ![](images/200/AccessRules.gif)  
+
+
+### **STEP 15**: Access the Big Data Cluster Console
+- Launch the Big Data Cluster Console for your BDCS-CE cluster.  If this is your first time, you will likely need to allow your browser to accept the self-signed certificate for the web console application.
+- You will be asked to provide a username/password.  Use the username and password you defined earlier when you created the BDCS-CE instance (the username defaults to bdcsce_admin).  
+  ![](images/300/firstLogin.gif)
 
 
 
 # What you Learned
 
-- Learned how to import notes into the BDCS-CE Notebook
-- Learned how to work with the BDCS-CE Notebook
-- Learned how to work with Hive
-- Learned how to work with Spark and Spark SQL
-- Learned how to work with Oracle Cloud Storage Object Store
+- Learned how to provision a BDCS-CE instance
+- Learned how to access BDCS-CE
 
 # Next Steps
 
-- Run some of the demonstration notes in the Notebook
-- Experiment with your own data.  Load it into the Object Store, define Spark or Hive tables against it, and run queries against your data.
-- Proceed to the next Lab to learn how to add Oracle Event Hub Cloud Service to the architcture and how to leverage Spark Streaming
+- Proceed to the next Lab to learn how to use BDCS-CE's notebook and services like Hive, Spark, and SparkSQL.
