@@ -1,6 +1,6 @@
 ![](images/200/200.JPG)  
 
-Updated: June 30, 2017
+Updated: July 5, 2017
 
 
     Note: if you are an Oracle employee following the Lab100GSE instructions to use a GSE Deal Server, you can skip this lab and move to lab 300.
