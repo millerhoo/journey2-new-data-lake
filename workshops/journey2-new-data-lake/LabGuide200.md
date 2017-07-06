@@ -1,16 +1,17 @@
 ![](images/200/200.JPG)  
 
-Updated: July 5, 2017
+Updated: July 6, 2017
 
 
-    Note: if you are an Oracle employee following the Lab100GSE instructions to use a GSE Deal Server, you can skip this lab and move to lab 300.
+    Note: if you are an Oracle employee following the Lab100GSE instructions to use a GSE Deal Server,
+    the BDCS-CE instance should already be provisioned and you can skip this lab and move to lab 300.
 
 
 ## Introduction
 
 In this lab, you learn how to provision a **Oracle Big Data Cloud Service - Compute Edition (BDCS-CE)** cluster.  
 
-The Oracle Big Data Cloud Service - Compute Edition (BDCS-CE) enables you to rapidly, securely, and cost-effectively leverage the power of an elastic, integrated Big Data Infrastructure to unlock the value in Big Data.   In this lab, we will walk you through the steps to quickly configure and create a Big Data Cloud Service instance.  When done you will see how to view the configuration and layout of your instance using the Oracle Big Data Console, the Ambari management interface and how to access your instance using SSH to your servers using a command line terminal.  The tutorial will also show how to add additional nodes to a Hadoop cluster, monitor jobs, set access rules, modify configuration settings and view activity on the Hadoop cluster.  
+The Oracle Big Data Cloud Service - Compute Edition (BDCS-CE) enables you to rapidly, securely, and cost-effectively leverage the power of an elastic, integrated Big Data Infrastructure to unlock the value in Big Data.   In this lab, we will walk you through the steps to quickly configure and create a Big Data Cloud Service instance.  When done you will see how to view the configuration and layout of your instance using the Oracle Big Data Console.  
 
 
 Please direct comments to: David Bayard (david.bayard@oracle.com)
@@ -31,13 +32,13 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 
-- ![](images/300/snap0011988.jpg) 
+![](images/300/snap0011988.jpg) 
 
 ### **STEP 2**: Click the Create Instance link (in the Create Instance box under the Welcome layer)
 
 ### **STEP 3**: Click All Services, then click Create next to Big Data - Compute Edition
 
-- ![](images/200/DashboardCreate.gif)  
+![](images/200/DashboardCreate.gif)  
 
 ### **STEP 3**: Click Create Service on the BDCS-CE services page
 
