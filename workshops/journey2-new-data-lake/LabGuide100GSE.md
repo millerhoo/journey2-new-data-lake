@@ -99,7 +99,7 @@ Note your Identity Domain
 Click on the “Open Service Console”
 ![](images/100GSE/picture-13.png)
 
-Note that the “myBDCSCE” service has already been created for you
+Note that the “myBDCSCE” service has already been created for you.  If NOT created, you can follow the instructions in LabGuide200.md and create a new BDCSCE instance on your own.
 ![](images/100GSE/picture-14.png)
 
 Click on the ![](images/100GSE/picture-15.png)  icon next the myBDCSCE service, followed by Big Data Cluster Console
@@ -120,4 +120,4 @@ At this point, you can use the pre-created “myBDCSCE” instance and start wit
 
 OR
 
-You can optionally follow the instructions in [LabGuide200.md](LabGuide200.md) and create a new BDCSCE instance on your own. 
+As mentioned, you can optionally follow the instructions in [LabGuide200.md](LabGuide200.md) and create a new BDCSCE instance on your own. 
