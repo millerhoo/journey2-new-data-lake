@@ -2,17 +2,14 @@
 
 Updated: July 6, 2017
 
-
     Note: if you are an Oracle employee following the Lab100GSE instructions to use a GSE Deal Server,
     the BDCS-CE instance should already be provisioned and you can skip this lab and move to lab 300.
-
 
 ## Introduction
 
 In this lab, you learn how to provision a **Oracle Big Data Cloud Service - Compute Edition (BDCS-CE)** cluster.  
 
 The Oracle Big Data Cloud Service - Compute Edition (BDCS-CE) enables you to rapidly, securely, and cost-effectively leverage the power of an elastic, integrated Big Data Infrastructure to unlock the value in Big Data.   In this lab, we will walk you through the steps to quickly configure and create a Big Data Cloud Service instance.  When done you will see how to view the configuration and layout of your instance using the Oracle Big Data Console.  
-
 
 Please direct comments to: David Bayard (david.bayard@oracle.com)
 
@@ -52,8 +49,7 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 ### **STEP 5**: In the Cluster Configuration section, choose **Full** for the Deployment Profile and choose **1** for the Number of Nodes.
 - For this workshop, be sure to choose Full for the Deployment Profile.  The Full profile includes components like Hive which are not part of the Basic profile.
 
-![](images/200/BDCScreate1.gif)  
-
+![](images/200/CreateService.png)  
 
 ### **STEP 6**: In the Credentials section, define your SSH public key and the desired username/password to use for the BDCS-CE cluster administrator.
 
@@ -64,8 +60,8 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
   - Make sure and write down the location of this SSH key file.
   - The SSH Public Key field will then get filled in automatically.
 - **Administrative User**: Define the user id for the administration user for your instance. (We suggest you leave it at its default: bdcsce_admin)
-- **Password**: Enter a password to set for the administration user.
-- Confirm Password: Verify the password for the administration user.
+- **Password**: Enter a password to set for the administration user.  Password for the Cluster user. \"Password must be at least 8 characters long with at least one lower case letter, one upper case letter, one number and one special character. For example, Ach1z0#d\"
+- Confirm Password: Re-enter the password for the administration user.
 ![](images/200/BDCScreate2.gif)  
 
 ### **STEP 7**: In the Cloud Storage Credentials section, provide your Cloud Storage information.
@@ -110,18 +106,14 @@ Sections include:
 - **Resources** – displays information on the resources associated with your Service.  As you scale out and add more nodes, the new nodes as well as their Public IP address, OCPUs, Memory and Storage will be displayed.
 - **Associations** – displays information on any additional resources associated with your Service.  Associations will automatically setup the necessary network Access Rules between services. 
 
-
 ### **STEP 14**: Review the Access Rules for your cluster
 For now, you don't need to make changes to the default Access Rules.  In a later tutorial, we will use this to allow SSH access.  This is also the place where you can enable Ambari access (port 8080) which is disabled by default.
 ![](images/200/AccessRules.gif)  
-
 
 ### **STEP 15**: Access the Big Data Cluster Console
 - Launch the Big Data Cluster Console for your BDCS-CE cluster.  If this is your first time, you will likely need to allow your browser to accept the self-signed certificate for the web console application.
 - You will be asked to provide a username/password.  Use the username and password you defined earlier when you created the BDCS-CE instance (the username defaults to bdcsce_admin).  
 ![](images/300/firstLogin.gif)
-
-
 
 # What you Learned
 
