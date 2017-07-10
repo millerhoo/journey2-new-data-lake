@@ -60,7 +60,7 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
   - Make sure and write down the location of this SSH key file.
   - The SSH Public Key field will then get filled in automatically.
 - **Administrative User**: Define the user id for the administration user for your instance. (We suggest you leave it at its default: bdcsce_admin)
-- **Password**: Enter a password to set for the administration user.  Password for the Cluster user. \"Password must be at least 8 characters long with at least one lower case letter, one upper case letter, one number and one special character. For example, Ach1z0#d\"
+- **Password**: Enter a password to set for the administration user.  \"Password must be at least 8 characters long with at least one lower case letter, one upper case letter, one number and one special character. For example, Ach1z0#d\"
 - Confirm Password: Re-enter the password for the administration user.
 ![](images/200/BDCScreate2.gif)  
 
