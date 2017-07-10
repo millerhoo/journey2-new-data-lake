@@ -72,7 +72,7 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 - **Username** – User name of the user who has access to the specified Oracle Storage Cloud Service container.
 - **Password** – The password of the above user.
-- **Create Cloud Storage Container** – select this if your provided the name of a new non-existing container.  If you are running this for the first time, most likely you will select this checkbox.
+- **Create Cloud Storage Container** – select this if you provided the name of a new non-existing container.  If you are running this for the first time, most likely you will select this checkbox.
 
 ![](images/200/BDCScreate3.gif)  
 
