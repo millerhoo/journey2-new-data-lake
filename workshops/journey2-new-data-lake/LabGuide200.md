@@ -46,7 +46,7 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 ![](images/200/snap0012021.jpg)  
 
-### **STEP 5**: In the Cluster Configuration section, choose **Full** for the Deployment Profile and choose **1** for the Number of Nodes.
+### **STEP 5**: In the Cluster Configuration section, choose **Full** for the Deployment Profile and enter **1** for the Number of Nodes.
 - For this workshop, be sure to choose Full for the Deployment Profile.  The Full profile includes components like Hive which are not part of the Basic profile.
 
 ![](images/200/CreateService.png)  
