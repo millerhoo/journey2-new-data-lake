@@ -19,7 +19,6 @@ The Oracle Event Hub Cloud Service is a managed Platform as a Service (PaaS) clo
  + Choose different cluster configurations depending on your needs.
  + Use open REST APIs and CLIs to manage, use, and extend the service.
 
-
 Documentation for OEHCS can be found here: <http://docs.oracle.com/cloud/latest/event-hub-cloud/index.html>.  General info about Apache Kafka can be found here: <https://kafka.apache.org/>.
 
 Please direct comments to: David Bayard (david.bayard@oracle.com)
@@ -43,19 +42,19 @@ The "OEHCS Platform" is also sometimes referred to as "OEHCS Dedicated" because 
 
 ### **STEP 1**: Connect to the Oracle Cloud My Services Dashboard 
 
-- ![](images/300/snap0011988.jpg) 
+![](images/300/snap0011988.jpg) 
 
 ### **STEP 2**: Navigate to the Event Hub - Dedicated page
 
-- ![](images/400/snap0011999.jpg)  
+![](images/400/snap0011999.jpg)  
 
 ### **STEP 3**: Click the Create Service button
 
-- ![](images/400/snap0012000.jpg) 
+![](images/400/snap0012000.jpg) 
 
 ### **STEP 4**: Fill in the basic service details and click Next
 
-- ![](images/400/snap0012001.jpg) 
+![](images/400/snap0012001.jpg) 
 
 ### **STEP 5**: Fill in the additional service details and click Next
 
@@ -65,21 +64,19 @@ The "OEHCS Platform" is also sometimes referred to as "OEHCS Dedicated" because 
 - Compute Shape: Choose the smallest shape as that is all that is needed for this lab.
 - Enable Rest Access: You can leave it unchecked as you don't need REST access in this lab.
 
-- ![](images/400/OEHCSplatform.gif) 
+![](images/400/OEHCSplatform.gif) 
 
 ### **STEP 6**: Click the Create button on the confirmation page to start the OEHCS Platform provisioning
 
 - Provisioning will now begin.  It can take 10 minutes for it to complete.
 
-- ![](images/400/snap0012002.jpg) 
-
-
+![](images/400/snap0012002.jpg) 
 
 ### **STEP 7**: Once provisioning is completed, click on the name of the instance to go to the Service Overview page
 
 - After provisioning is completed, the Service Overiew page has useful information including the **Connect Descriptor**.  You will use the Connect Descriptor later in the lab exercises.
-- ![](images/400/snap0012003.jpg) 
 
+![](images/400/snap0012003.jpg) 
 
 # Create your first OEHCS topic
 
@@ -99,23 +96,20 @@ In this section, we will create a new Kafka topic in OEHCS.  Before we do so, a 
 - ![](images/400/snap0012005.jpg) 
 - If this seems confusing, it helps to remember the distinction between "OEHCS Platform" which represents a dedicated Kafka cluster and "OEHCS Topics" which represent individual Kafka topics.  In other words, you have navigated from the screen where you manage the cluster itself (the "Platform" page) to where you will manage the individual topics you want to use.
 
-
-
 ## Create your first OEHCS Kafka topic
 
 ### **STEP 1**: In the Oracle Event Hub Cloud Service page, click on the Services tab if it is not already selected.
 
-- ![](images/400/snap0012006.jpg) 
+![](images/400/snap0012006.jpg) 
 
 ### **STEP 2**: Click the Create Service button
-
 
 ### **STEP 3**: Fill in the details for your topic and click Next
 
 - Service Name: enter a name like FirstTopic.
 - Hosted On: Select the name of the OEHCS Platform instance you created earlier. 
 - Partitions: Choose 1 for this exercise.
-- ![](images/400/OEHCStopic.gif) 
+![](images/400/OEHCStopic.gif) 
 
 ### **STEP 4**: Click Create to complete the wizard.
 
@@ -125,9 +119,7 @@ In this section, we will create a new Kafka topic in OEHCS.  Before we do so, a 
 
 - Specifically, it will show you the full name of your topic.  The full name will have your identity domain prefixed to the topic name.  You will need to use the full topic name is your consumer and provider code.
 
-- ![](images/400/OEHCStopicdetails.gif)  
-
-
+![](images/400/OEHCStopicdetails.gif)  
 
 # What you Learned
 
