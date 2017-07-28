@@ -1,6 +1,6 @@
 ![](images/200/200.JPG)  
 
-Updated: July 6, 2017
+Updated: July 27, 2017 for BDCS-CE Version 17.3-1-20
 
     Note: if you are an Oracle employee following the Lab100GSE instructions to use a GSE Deal Server,
     the BDCS-CE instance should already be provisioned and you can skip this lab and move to lab 300.
@@ -42,14 +42,16 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 ![](images/200/snap0012020.jpg)  
 
-### **STEP 5**: Fill in the Service Name and Description and click Next
+### **STEP 5**: Fill in the Service Name, Description, Email and click Next
+- You can choose whatever you want for Service Name.  It is an identifier to help you in case you create more than one BDCSCE cluster.
 
-![](images/200/snap0012021.jpg)  
+![](images/200/snap0012139.jpg)  
 
-### **STEP 5**: In the Cluster Configuration section, choose **Full** for the Deployment Profile and enter **1** for the Number of Nodes.
+### **STEP 5**: In the Cluster Configuration section, choose **Full** for the Deployment Profile, enter **1** for the Number of Nodes, and be sure to choose Spark Version 1.6.
 - For this workshop, be sure to choose Full for the Deployment Profile.  The Full profile includes components like Hive which are not part of the Basic profile.
+- Currently, the examples are built for Spark 1.6 so be sure to select that version.
 
-![](images/200/CreateService.png)  
+![](images/200/BDCScreate1.gif)  
 
 ### **STEP 6**: In the Credentials section, define your SSH public key and the desired username/password to use for the BDCS-CE cluster administrator.
 
@@ -76,21 +78,25 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 ![](images/200/BDCScreate3.gif)  
 
-### **STEP 8**: In the Associations section, leave the checkboxes unchecked for now.
+### **STEP 8**: In the Block Storage section, leave the defaults for now.
+![](images/200/snap0012140.jpg)  
+
+### **STEP 9**: In the Associations section, leave the checkboxes unchecked for now.
 
 - Associations will automatically create the necessary Access Rules between services.  For this workshop, we'll show you how to manually define Access Rules at a later point.
+![](images/200/snap0012141.jpg)  
 
-### **STEP 9**: Click Next.
-
-### **STEP 10**: Click Create.
+### **STEP 10**: Click Next.  Then, click Create.
 
 ![](images/200/snap0012022.jpg)  
 
 ### **STEP 11**: Wait for the BDCS-CE instance to be provisioned.
 
 - While being provisioned, the Status will say "Creating service".  You can click on the status to get more information.
-- As of 17.2.5, it can take about 15-20 minutes to finish creating the service.
+- As of 17.3.1-20, it can take about 15-20 minutes to finish creating the service.
 ![](images/200/snap0012023.jpg)  
+- If you entered a valid email address, you will get an email the instance provisioning is finished:
+![](images/200/snap0012142.jpg)  
 
 ### **STEP 12**: When the BDCS-CE instance is provisioned (the status is Ready), click on the name of the instance to go to the Service Overview page.
 ![](images/200/snap0012069.jpg)  
