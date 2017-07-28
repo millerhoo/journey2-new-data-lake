@@ -1,5 +1,5 @@
 ![](images/500/500.JPG)  
-Updated: June 19, 2017
+Updated: July 28, 2017 for BDCSCE 17.3.1-20
 
 ## Introduction
 

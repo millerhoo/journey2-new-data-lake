@@ -1,5 +1,5 @@
 ![](images/400/400.JPG)  
-Updated: June 19, 2017
+Updated: July 28, 2017 for OEHCS 0.10.2
 
 ## Introduction
 
@@ -54,7 +54,8 @@ The "OEHCS Platform" is also sometimes referred to as "OEHCS Dedicated" because 
 
 ### **STEP 4**: Fill in the basic service details and click Next
 
-![](images/400/snap0012001.jpg) 
+- You can pick any service name you want and do not have to match what is in the screenshot below.
+![](images/400/snap0012143.jpg) 
 
 ### **STEP 5**: Fill in the additional service details and click Next
 
