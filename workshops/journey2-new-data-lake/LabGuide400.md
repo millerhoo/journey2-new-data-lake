@@ -44,7 +44,8 @@ The "OEHCS Platform" is also sometimes referred to as "OEHCS Dedicated" because 
 
 ![](images/300/snap0011988.jpg) 
 
-### **STEP 2**: Navigate to the Event Hub - Dedicated page
+### **STEP 2**: Navigate to the Oracle Event Hub Cloud Service - Platform page
+It may be listed in "Event Hub - Dedicated" in some versions.
 
 ![](images/400/snap0011999.jpg)  
 
@@ -92,14 +93,15 @@ In this section, we will create a new Kafka topic in OEHCS.  Before we do so, a 
 
 - ![](images/400/snap0012004.jpg) 
 
-### **STEP 2**: From the top-level OEHCS Platform page, use the pop-up menu (to the right of the OEHCS - Platform label) to navigate to the "Oracle Event Hub Cloud Service"
+### **STEP 2**: From the top-level OEHCS Platform page, use the pop-up menu (to the right of the OEHCS - Platform label) to navigate to the "Oracle Event Hub Cloud Service - Topics"
+It may be labelled "Oracle Event Hub Cloud Service" in some versions.
 
 - ![](images/400/snap0012005.jpg) 
 - If this seems confusing, it helps to remember the distinction between "OEHCS Platform" which represents a dedicated Kafka cluster and "OEHCS Topics" which represent individual Kafka topics.  In other words, you have navigated from the screen where you manage the cluster itself (the "Platform" page) to where you will manage the individual topics you want to use.
 
 ## Create your first OEHCS Kafka topic
 
-### **STEP 1**: In the Oracle Event Hub Cloud Service page, click on the Services tab if it is not already selected.
+### **STEP 1**: In the Oracle Event Hub Cloud Service - Topics page, click on the Services tab if it is not already selected.
 
 ![](images/400/snap0012006.jpg) 
 

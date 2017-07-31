@@ -3,7 +3,6 @@
         "title": "Big Data Journey: New Data Lake",
         "description": "This workshop will show you how to build your New Data Lake in the Oracle Public Cloud.",
         "theme": "default",
-        "interactive":"https://launch.oracle.com/?cloudnative",
         "labs": [
             {
                 "number": "0",
