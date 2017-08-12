@@ -112,7 +112,7 @@ Please walk through the paragraphs one by one. Read through the content of the p
 
 # Learn how to work with Hive
 
-## Open and run the fourth anf fifth Tutorial note in the notebook
+## Open and run the fourth and fifth Tutorial note in the notebook
 
 ### **STEP 1**: Click on the Notebook tab.  Then click on Tutorial 4 to open it. 
 
