@@ -12,27 +12,21 @@
             },
             {
                 "number": "100",
-                "filename": "LabGuide100.md",
-                "title": "Lab 100: Trial Account Signup",
-                "description": "Instructions to sign-up for a free trial of Oracle Public Cloud services"
-            },
-            {
-                "number": "100GSE",
-                "filename": "LabGuide100GSE.md",
-                "title": "Lab 100GSE: ALTERNATE VERSION",
-                "description": "Oracle Employee/Partner instructions to get access to a GSE/demo.oracle.com Oracle Public Cloud demo environment"
+                "filename": "LabGuide100StartHere.md",
+                "title": "Lab 100: START HERE - Provisioning",
+                "description": "Instructions to provision Oracle Big Data Cloud Service - Compute Edition (BDCS-CE) in your Oracle Public Cloud identity domain"
             },
             {
                 "number": "200",
                 "filename": "LabGuide200.md",
-                "title": "Lab 200: BDCS-CE Provisioning",
-                "description": "Instructions to provision Oracle Big Data Cloud Service - Compute Edition (BDCS-CE) in your Oracle Public Cloud identity domain"
+                "title": "Lab 200: Getting to know BDCS-CE",
+                "description": "This lab will help you get to know BDCS-CE.  It will use the Notebook component and show you how to use the basic features (object store, hive) you'll need as you build your New Data Lake."
             },
             {
                 "number": "300",
                 "filename": "LabGuide300.md",
-                "title": "Lab 300: Getting to know BDCS-CE",
-                "description": "This lab will help you get to know BDCS-CE.  It will use the Notebook component and show you how to use the key features (object store, hive, spark, spark sql) you'll need as you build your New Data Lake."
+                "title": "Lab 300: More BDCS-CE",
+                "description": "This lab will help you get to know more BDCS-CE.  It will use the Notebook component and show you how to use the more key features (spark, spark sql) you'll need as you build your New Data Lake."
             },
             {
                 "number": "400",
@@ -43,8 +37,20 @@
             {
                 "number": "500",
                 "filename": "LabGuide500.md",
-                "title": "Lab 500: Getting to know OEHCS",
+                "title": "Lab 500: Working with OEHCS and BDCS-CE",
                 "description": "This lab will help you get to know Oracle Event Hub Cloud Service (OEHCS).  It will use the Zeppelin notebook and Spark Streaming from your BDCS-CE instance and show you how to write consumers and producers for OEHCS."
+            },
+            {
+                "number": "950",
+                "filename": "xtra300Trail.md",
+                "title": "xtra: $300 Trial Account Signup",
+                "description": "Instructions to sign-up for a free trial of Oracle Public Cloud services"
+            },
+            {
+                "number": "952",
+                "filename": "xtraGSErequest.md",
+                "title": "xtra: Employee GSE Account Request",
+                "description": "Oracle Employee instructions to get access to a GSE/demo.oracle.com Oracle Public Cloud demo environment"
             },
             {
                 "number": "9999",

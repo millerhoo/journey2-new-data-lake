@@ -30,8 +30,8 @@ chmod u+x ~zeppelin/object_store_env.sh
 echo "importing lab notebooks"
 mkdir /tmp/notebooks
 cd /tmp/notebooks
-wget -nc https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/notes.zip
-unzip Lab300Tutorials.zip
+wget -nc https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/Notes.zip
+unzip Notes.zip
 for note in /tmp/notebooks/*.json
 do
   echo $note
