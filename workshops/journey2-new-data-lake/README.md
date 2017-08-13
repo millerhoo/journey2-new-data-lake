@@ -42,8 +42,6 @@ The New Data Lake workshop will use a series of tutorials running in Zeppelin No
 
 - To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/oracle/learning-library/tree/master/workshops/journey2-new-data-lake) repository.
 
-- Visit the [Workshop Interactive Labguide](http://launch.oracle.com/?cloudnative) for a visual overview of the workshop content. 
-
 
 
 
@@ -51,45 +49,35 @@ The New Data Lake workshop will use a series of tutorials running in Zeppelin No
 
 **Reference the following Lab Guides by opening their Documentation Files:**
 
-## Lab 100: Signup for the Oracle Public Cloud Trial
+## Lab 100: START HERE
 
-**Documenation**: [LabGuide100.md](LabGuide100.md)
-
-**Objectives**:
-
-- Signup for a Oracle Cloud Trial
-
-## Lab 100GSE: ALTERNATIVE VERSION of Lab 100 for Oracle Employees and Partners with access to GSE "Deal Server" environments
-
-**Documenation**: [LabGuide100GSE.md](LabGuide100GSE.md)
+**Documenation**: [LabGuide100StartHere.md](LabGuide100StartHere.md)
 
 **Objectives**:
 
-- Request a GSE Deal Server environment
-- How to access the GSE Deal Server environment when ready
+- Provision a Big Data Cloud Service - Compute Edition (BDCS-CE) environment for use with this Journey
 
-## Lab 200: Provisioning Big Data Cloud Service - Compute Edition
+## Lab 200: Getting to know BDCS-CE
 
 **Documenation**: [LabGuide200.md](LabGuide200.md)
-
-**Objectives**:
-
-- Provision Oracle Big Data Cloud Service - Compute Edition instance
-- How to connect to your BDCS-CE instance via SSH
-
-## Lab 300: Getting to know BDCS-CE
-
-**Documenation**: [LabGuide300.md](LabGuide300.md)
 
 **Objectives**:
 
 - Accessing your BDCS-CE instance
 - Working with Zeppelin Notebooks
 - Working with Hive
-- Working with Spark and Spark SQL
 - Working with Oracle Storage Cloud Object Store
 
-## Lab 400:  Provisioning Oracle Event Hub Cloud Service
+## Lab 300: More BDCS-CE
+
+**Documenation**: [LabGuide300.md](LabGuide300.md)
+
+**Objectives**:
+
+- Working with Spark and Spark SQL
+- Working with Maps in Zeppelin and Spark
+
+## Lab 400:  Provisioning Oracle Event Hub Cloud Service (OEHCS)
 
 **Documenation**: [LabGuide400.md](LabGuide400.md)
 
@@ -98,7 +86,7 @@ The New Data Lake workshop will use a series of tutorials running in Zeppelin No
 - Provisioning the OEHCS Platformn instance
 - Creating your first OEHCS topic
 
-## Lab 500:  Getting to know Oracle Event Hub Cloud Service and Spark Streaming
+## Lab 500:  Working with OEHCS and BDCS-CE and Spark Streaming
 
 **Documenation**: [LabGuide500.md](LabGuide500.md)
 

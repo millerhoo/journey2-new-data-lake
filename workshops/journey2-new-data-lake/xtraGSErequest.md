@@ -13,12 +13,19 @@ As of the date of this publication, a GSE engineer must manually configure a dem
 This guide is intended to help Oracle Solution Engineers set up an Oracle Big Data Cloud Service – Compute Edition environment in Demo Central so they may run through the Big Data Journeys available for clients and prospects
 
 # Steps
+- Review important information at [http://bdcoe.us.oracle.com/wordpress/pilot-to-production/journeys/journey-via-the-gse/](http://bdcoe.us.oracle.com/wordpress/pilot-to-production/journeys/journey-via-the-gse/)
 - Register a Demo with Demo Central
 - Launch the Demo Environment
 - Customize Your Dashboard to Display Additional Services
-- Verify the Storage Cloud Service and Storage Container are Created
-- Verify the Big Data Cloud Service – Compute Edition Service is Created
+- Review the Storage Cloud Service 
+- Review the Big Data Cloud Service – Compute Edition Service 
 - Begin Your Big Data Journey
+
+## Review important information at [http://bdcoe.us.oracle.com/wordpress/pilot-to-production/journeys/journey-via-the-gse/](http://bdcoe.us.oracle.com/wordpress/pilot-to-production/journeys/journey-via-the-gse/)
+
+1)  Navigate to [http://bdcoe.us.oracle.com/wordpress/pilot-to-production/journeys/journey-via-the-gse/](http://bdcoe.us.oracle.com/wordpress/pilot-to-production/journeys/journey-via-the-gse/)
+2)  Review the webpage for any last-minute updates or critical announcements
+3)  Watch the short [video](https://oradocs-corp.documents.us2.oraclecloud.com/documents/link/LF16817FBC1D054667CD932FF6C3FF17C1177A968060/fileview/DF784173A97E3D87E97BC836F6C3FF17C1177A968060/_How_To_Register_a_Demo_Training.mp4)
 
 ## Register a Demo with Demo Central
 1)	Visit Demo Central at `http://demo.oracle.com`
@@ -26,14 +33,16 @@ This guide is intended to help Oracle Solution Engineers set up an Oracle Big Da
 3)	Click “Register a Demo” button
 4)	Search for “Big Data Cloud Service Compute Edition (BDCS CE) with Zeppelin”
 5)	Complete the Demo Registration form using the following values:
--	Demo Purpose: “Personal Learning”
+-	Demo Purpose: “Oracle or Partner Training”
 -	Description/Comments: “Walk through Big Data Journeys”
+-   Choose a New Deal Server Environment
+-   Choose PAASMETCSPC01 - PaaS - Metered Cloud Service Plus
 -	Demo Resource Request Type: “A new Deal Server Environment”	
 -	Activity Start Date:  <your start date>
 -	Activity End Date:  <your end date>
 -	Demo Date(s):  <your demo date>
 
-![](images/100GSE/picture-01.png)  
+![](images/100GSE/snap0012224.png)  
 
 6)	Click “Next” button
 7)	Select “Horizontal (NOT Industry-Specific)”
@@ -83,7 +92,7 @@ Note your Identity Domain
 Click on the “Open Service Console” button
 ![](images/100GSE/picture-10.png) 
 
-Note that the “BDCSCE” container has already been created for you. 
+Note that there may already be some containers created.  That is OK- we won't use them but you can leave them as-is. 
 
 Also note in the upper left it says something like “Storage-gse0002004”.  You will use info this when you provision BDCS-CE.
 ![](images/100GSE/picture-11.png)
@@ -99,25 +108,13 @@ Note your Identity Domain
 Click on the “Open Service Console”
 ![](images/100GSE/picture-13.png)
 
-Note that the “myBDCSCE” service has already been created for you.  If NOT created, you can follow the instructions in LabGuide200.md and create a new BDCSCE instance on your own.
-![](images/100GSE/picture-14.png)
+Note that a “myBDCSCE” service has already been created for you.  We will not use this instance.  You can delete it (and probably should delete it to free up quota in your environment)
 
-Click on the ![](images/100GSE/picture-15.png)  icon next the myBDCSCE service, followed by Big Data Cluster Console
+Click on the ![](images/100GSE/picture-15.png)  icon next the myBDCSCE service, then choose Delete to delete the myBDCSCE instance.
 
 ![](images/100GSE/picture-16.png)
 
-Log in using the following credentials
-- User: bdcsce_admin
-- Password: Welcome321
-![](images/100GSE/picture-17.png)
 
 ## Begin Your Big Data Journey
-Visit `http://www.oracle.com/bigdatajourney` and register with your email address
 
-Click the ![](images/100GSE/picture-18.png)  button
-
-At this point, you can use the pre-created “myBDCSCE” instance and start with [LabGuide300.md](LabGuide300.md)
-
-OR
-
-As mentioned, you can optionally follow the instructions in [LabGuide200.md](LabGuide200.md) and create a new BDCSCE instance on your own. 
+Follow the instructions in [Lab100 StartHere](LabGuide200StartHere.md) and create a new BDCSCE instance on your own. 
