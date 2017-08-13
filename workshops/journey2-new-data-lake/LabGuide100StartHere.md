@@ -82,7 +82,7 @@ If you used a different container name than journeyC, substititute it accordingl
 
 ![](images/100/snap0012188.jpg) 
 
-
+### **STEP 5**: Click the My Services link in the upper right to return to Cloud My Services Dashboard
 
 # Provision a new BDCS-CE Instance
 
@@ -92,27 +92,25 @@ If you used a different container name than journeyC, substititute it accordingl
 
 ![](images/300/snap0011988.jpg) 
 
-### **STEP 2**: Click the Create Instance link (in the Create Instance box under the Welcome layer)
+### **STEP 2**: Using the upper left menu, navigate to Big Data - Compute Edition
 
-### **STEP 3**: Click All Services, then click Create next to Big Data - Compute Edition
-- This will take you to the BDCS-CE Services page.
-- Here is an animation of Steps 2 and 3:
-![](images/200/DashboardCreate.gif)  
+![](images/100/snap0012189.jpg) 
 
-### **STEP 4**: Click Create Service on the BDCS-CE services page
+### **STEP 3**: Click Create Service
 
-![](images/200/snap0012020.jpg)  
+![](images/100/snap0012190.jpg)  
 
-### **STEP 5**: Fill in the Service Name, Description, Email and click Next
+
+### **STEP 4**: Fill in the Service Name, Description, Email and click Next
 - You can choose whatever you want for Service Name.  It is an identifier to help you in case you create more than one BDCSCE cluster.
 
-![](images/200/snap0012139.jpg)  
+![](images/100/snap0012191.jpg)  
 
-### **STEP 5**: In the Cluster Configuration section, choose **Full** for the Deployment Profile, enter **1** for the Number of Nodes, and be sure to choose Spark Version 1.6.
+### **STEP 5**: In the Cluster Configuration section, choose **Full** for the Deployment Profile, enter **1** for the Number of Nodes, and be sure to choose Spark Version 2.1.
 - For this workshop, be sure to choose Full for the Deployment Profile.  The Full profile includes components like Hive which are not part of the Basic profile.
-- Currently, the examples are built for Spark 1.6 so be sure to select that version.
+- Currently, the examples are built for Spark 2.1 so be sure to select that version.
 
-![](images/200/BDCScreate1.gif)  
+![](images/100/BDCSCE_Aug_creation1.gif)  
 
 ### **STEP 6**: In the Credentials section, define your SSH public key and the desired username/password to use for the BDCS-CE cluster administrator.
 
@@ -125,19 +123,20 @@ If you used a different container name than journeyC, substititute it accordingl
 - **Administrative User**: Define the user id for the administration user for your instance. (We suggest you leave it at its default: bdcsce_admin)
 - **Password**: Enter a password to set for the administration user.  \"Password must be at least 8 characters long with at least one lower case letter, one upper case letter, one number and one special character. For example, Ach1z0#d\"
 - Confirm Password: Re-enter the password for the administration user.
-![](images/200/BDCScreate2.gif)  
+![](images/100/BDCScreate2.gif)  
 
 ### **STEP 7**: In the Cloud Storage Credentials section, provide your Cloud Storage information.
 
-- **Cloud Storage Container** – Name of an existing Oracle Storage Cloud Service container to be associated with the cluster, or a new one to be created.
-  - The format is Storage-\<identity_domain\>/\<container\>, where \<identity_domain\> is the ID of the identity domain, and \<container\> is the name of the container, for example, _Storage-a405202/journeyTwo_.
-  - Refer to Lab100's "Configure your Storage Replication Policy" section if you need to lookup the Identity Domain.  The instructions in that section show you where you can find it.
+- **Cloud Storage Container** – The full name of the Oracle Storage Cloud Service container to be associated with the cluster.
+  - The format is Storage-\<identity_domain\>/\<container\>, where \<identity_domain\> is the ID of the identity domain, and \<container\> is the name of the container, for example, _Storage-a405202/journeyC_.
+  - If you followed along with the instructions, you should have a document with these 2 pieces of information:
+![](images/100/snap0012192.jpg)  
 
 - **Username** – User name of the user who has access to the specified Oracle Storage Cloud Service container.
 - **Password** – The password of the above user.
-- **Create Cloud Storage Container** – select this if you provided the name of a new non-existing container.  If you are running this for the first time, most likely you will select this checkbox.
+- **Create Cloud Storage Container** – you do not need to select this as we created the container earlier in this lab
 
-![](images/200/BDCScreate3.gif)  
+![](images/100/BDCSCE_Aug_creation2.gif) 
 
 ### **STEP 8**: In the Block Storage section, leave the defaults for now.
 ![](images/200/snap0012140.jpg)  
@@ -149,18 +148,18 @@ If you used a different container name than journeyC, substititute it accordingl
 
 ### **STEP 10**: Click Next.  Then, click Create.
 
-![](images/200/snap0012022.jpg)  
+![](images/100/snap0012193.jpg)  
 
 ### **STEP 11**: Wait for the BDCS-CE instance to be provisioned.
 
 - While being provisioned, the Status will say "Creating service".  You can click on the status to get more information.
-- As of 17.3.1-20, it can take about 15-20 minutes to finish creating the service.
+- As of 17.3.3-20, it can take about 15-20 minutes to finish creating the service.
 ![](images/200/snap0012023.jpg)  
 - If you entered a valid email address, you will get an email the instance provisioning is finished:
 ![](images/200/snap0012142.jpg)  
 
 ### **STEP 12**: When the BDCS-CE instance is provisioned (the status is Ready), click on the name of the instance to go to the Service Overview page.
-![](images/200/snap0012069.jpg)  
+![](images/100/snap0012199.jpg)  
 
 ### **STEP 13**: Review the details on the Service Overview Page
 Sections include:
@@ -173,14 +172,21 @@ Sections include:
 - **Resources** – displays information on the resources associated with your Service.  As you scale out and add more nodes, the new nodes as well as their Public IP address, OCPUs, Memory and Storage will be displayed.
 - **Associations** – displays information on any additional resources associated with your Service.  Associations will automatically setup the necessary network Access Rules between services. 
 
-### **STEP 14**: Review the Access Rules for your cluster
+### **STEP 14**: Record the IP address and host name in your document
+
+![](images/100/BDCSCE_Aug_creation3.gif) 
+
+### **STEP 15**: Review the Access Rules for your cluster
 For now, you don't need to make changes to the default Access Rules.  In a later tutorial, we will use this to allow SSH access.  This is also the place where you can enable Ambari access (port 8080) which is disabled by default.
 ![](images/200/AccessRules.gif)  
 
-### **STEP 15**: Access the Big Data Cluster Console
+### **STEP 16**: Access the Big Data Cluster Console
 - Launch the Big Data Cluster Console for your BDCS-CE cluster.  If this is your first time, you will likely need to allow your browser to accept the self-signed certificate for the web console application.
 - You will be asked to provide a username/password.  Use the username and password you defined earlier when you created the BDCS-CE instance (the username defaults to bdcsce_admin).  
-![](images/300/firstLogin.gif)
+![](images/100/BDCSCE_Aug_creation4.gif) 
+
+### **STEP 17**: Record the web URL of the Big Data Cluster Console in your document
+
 
 # What you Learned
 

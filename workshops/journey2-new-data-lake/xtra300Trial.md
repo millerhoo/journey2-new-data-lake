@@ -1,14 +1,11 @@
 
-![](images/100/100.JPG)  
-Updated: June 20, 2017
-
-## Introduction
-Oracle offers a set of Big Data Journeys to help users get started using Oracle Cloud services with a purpose.  These journeys are available to everyone at [http://www.oracle.com/bigdatajourney](http://www.oracle.com/bigdatajourney)
-
-**If you are an Oracle Employee/Partner with access to GSE (demo.oracle.com), you should follow the alternate Lab 100GSE instructions available here: [LabGuide100GSE.md](LabGuide100GSE.md)**
+![](images/100/TRIAL.JPG)  
+Updated: August 13, 2017
 
 
-# Oracle Trial Account
+
+
+# Oracle Public Cloud Trial Account
 
 Using a free Oracle Public Cloud Trial account you can investigate any of the Oracle **Infrastructure** or **Platform** Cloud Services.
 
@@ -16,7 +13,9 @@ To get an Oracle Trial account, please go the [Oracle Try It](https://cloud.orac
 
 Along with the instruction provided on the Oracle website and **in this document**, you can Click on this [Video Link](https://publicdocs-corp.documents.us2.oraclecloud.com/documents/link/LD408AE98AE514A9D8A5B144F6C3FF17C1177E4725F3/fileview/D5BB8965F597992573C1B2A4F6C3FF17C1177E4725F3/_CloudCredits_VideoEdit.mp4) to view a short video showing how to acquire a trial account. 
 
-## Step by step instructions on Provisioning your Account
+NOTE: If you are an Oracle Employee, you are not eligible for the Trial Account program.  Instead, Oracle Employees should follow the instructions here [Employee Instructions](xtraGSErequest.md)
+
+## Step by step instructions on signing-up for the Free Trial Account
 
 ### 1. View Details and Sign Up
 
@@ -141,4 +140,4 @@ Depending on the state of your Cloud Account, you will need to set the **Replica
 
 # Next Steps
 
-Proceed to [LabGuide200.md](LabGuide200.md) to provision your BDCS-CE instance.
+Proceed to [Lab 100 Start Here](LabGuide100StartHere.md) to provision your BDCS-CE instance.

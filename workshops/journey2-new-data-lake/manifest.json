@@ -26,23 +26,23 @@
                 "number": "300",
                 "filename": "LabGuide300.md",
                 "title": "Lab 300: More BDCS-CE",
-                "description": "This lab will help you get to know more BDCS-CE.  It will use the Notebook component and show you how to use the more key features (spark, spark sql) you'll need as you build your New Data Lake."
+                "description": "This lab will help you get to know more BDCS-CE.  It will show you how to use more key features (spark, spark sql) with your New Data Lake."
             },
             {
                 "number": "400",
                 "filename": "LabGuide400.md",
                 "title": "Lab 400: OEHCS Provisioning",
-                "description": "Instructions to provision Oracle Event Hub Cloud Service"
+                "description": "This lab will show you how to provision Oracle Event Hub Cloud Service (OEHCS)"
             },
             {
                 "number": "500",
                 "filename": "LabGuide500.md",
-                "title": "Lab 500: Working with OEHCS and BDCS-CE",
-                "description": "This lab will help you get to know Oracle Event Hub Cloud Service (OEHCS).  It will use the Zeppelin notebook and Spark Streaming from your BDCS-CE instance and show you how to write consumers and producers for OEHCS."
+                "title": "Lab 500: OEHCS with BDCS-CE",
+                "description": "This lab will demonstrate how to combine OEHCS with BDCS-CE via Spark Streaming.  This can help you add real-time streaming data to your New Data Lake."
             },
             {
                 "number": "950",
-                "filename": "xtra300Trail.md",
+                "filename": "xtra300Trial.md",
                 "title": "xtra: $300 Trial Account Signup",
                 "description": "Instructions to sign-up for a free trial of Oracle Public Cloud services"
             },

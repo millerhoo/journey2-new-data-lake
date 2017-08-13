@@ -1,182 +1,95 @@
 ![](images/300/300.JPG)  
-Updated: July 27, 2017 for BDCSCE Version 17.3.1-20
+Updated: August 13, 2017 for BDCSCE Version 17.3.1-20
 
 ## Introduction
 
-This lab will walk you through getting to know **Oracle Big Data Cloud Service - Compute Edition (BDCS-CE)**.  
+This lab will walk you through additional features of **Oracle Big Data Cloud Service - Compute Edition (BDCS-CE)**.  
 
-You will use the Notebook feature of BDCS-CE to run a series of tutorials that show you different aspects of functionality.  You will learn how to work with the **Zeppelin Notebook**.  Another tutorial will show you to interact with **Hive**.   Then you will learn how to interact with **Spark** and **Spark SQL**. And a final tutorial will show you how to use **Oracle Cloud Storage Object Store**.  
+In particular, this lab will focus on interacting with **Spark** and **Spark SQL**. 
 
-Notebooks are used to explore and visualize data in an iterative and easily documented fashion. Oracle Big Data Cloud Service - Compute Edition uses Apache Zeppelin as its notebook interface and coding environment.  Information about Zeppelin can be found here: [https://zeppelin.apache.org/](https://zeppelin.apache.org/) .  To see examples of notes created and shared by other Zeppelin users, see [https://www.zeppelinhub.com/viewer](https://www.zeppelinhub.com/viewer) .
 
 Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 ## Objectives
 
-- Learn how to import notes into the BDCS-CE Notebook
-- Learn how to work with the BDCS-CE Notebook
-- Learn how to work with Hive
 - Learn how to work with Spark and Spark SQL
-- Learn how to work with Oracle Cloud Storage Object Store
+- Learn how to work with Maps with Spark and Zeppelin
 
 ## Required Artifacts
 
-- A running BDCS-CE instance and Storage Cloud Object Store instance (you created these in the previous lab)
-- Zip file of lab tutorials for the BDCS-CE Notebook, which can be downloaded from here: [Lab300Tutorials.zip](files/Lab300Tutorials.zip)
+- A running BDCS-CE instance and Storage Cloud Object Store instance, created as per the instructions in Lab 100.  These instructions included the use of a special "bootstrap.sh" script which setup the BDCS-CE environment for this workshop.
+- You completed the tutorials in Lab 200 Getting to know BDCS-CE
 
-# Import the tutorial notes into the BDCS-CE Notebook
-
-## Download the Tutorials zip file for this lab
-
-### **STEP 1**: Download the Tutorials zip file 
-
-- Download the Tutorials zip file from here: [Lab300Tutorials.zip](files/Lab300Tutorials.zip)
-
-### **STEP 2**: Unzip the Tutorials zip file
-
-- Unzip the tutorials file on your workstation.  There should be a number of files with .json extensions.
 
 
 ## Connect to the BDCS-CE Console
 
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 
-- ![](images/300/snap0011988.jpg) 
+![](images/300/snap0011988.jpg) 
 
 ### **STEP 2**: Navigate to the My Services page for your BDCS-CE cluster
 
-- ![](images/300/snap0011989.jpg)  
+![](images/300/snap0011989.jpg)  
 
 ### **STEP 3**: Launch the Big Data Cluster Console
 
-- Launch the Big Data Cluster Console for your BDCS-CE cluster.  If this is your first time, you will likely need to allow your browser to accept the self-signed certificate for the web console application.
-- You will be asked to provide a username/password.  Use the username and password you defined earlier when you created the BDCS-CE instance (the username defaults to bdcsce_admin).  If you are an Oracle Employee/Partner using a GSE "deal server" pre-provisioned environment, the un/pw will be set to bdcsce_admin/Welcome321
-  ![](images/300/firstLogin.gif)
-
-## Import the Tutorial Notes into the BDCS-CE Notebook
-
-### **STEP 1**: Navigate to the Notebook tab  
-
-
-### **STEP 2**: Click Import Note.  Browse your workstation to import the first tutorial .json file.
-
-- The .json files were downloaded and unzipped earlier in this lab.
-![](images/300/importNote.gif)
-
-### **STEP 3**: Repeat the above for the other Tutorial .json files in the zip
-
-- In addition, there are some demonstration notes you can import as well.
+![](images/300/snap0012205.jpg)  
 
 
 
-# Learn the basics of the BDCS-CE Notebook
-
-## Open and run the first Tutorial note in the notebook
-
-### **STEP 1**: Click on the Notebook tab.  Then click on Tutorial 1 to open it. 
-
-- ![](images/300/snap0011990.jpg) 
-
-### **STEP 2**: Read and follow the instructions in Tutorial 1
-
-- The paragraphs of the note are displayed. 
-
-Please walk through the paragraphs one by one. Read through the content of the paragraphs as you get to them. There is much useful information in the paragraphs that is not reproduced into these instructions.
-
-
-## Open and run the second Tutorial note in the notebook
-
-### **STEP 1**: Click on the Notebook tab.  Then click on Tutorial 2 to open it. 
-
-- ![](images/300/snap0011991.jpg) 
-
-### **STEP 2**: Read and follow the instructions in Tutorial 2
-
-- The paragraphs of the note are displayed. 
-
-Please walk through the paragraphs one by one. Read through the content of the paragraphs as you get to them. There is much useful information in the paragraphs that is not reproduced into these instructions.
-
-**Pay attention to the instructions in Tutorial 2.  They will ask you to do a few steps outside of the notebook.  These steps need to be completed for the remaining tutorials to work properly.**
-
-## Open and run the third Tutorial note in the notebook
-
-### **STEP 1**: Click on the Notebook tab.  Then click on Tutorial 3 to open it. 
-
-- ![](images/300/snap0011992.jpg) 
-
-### **STEP 2**: Read and follow the instructions in Tutorial 3
-
-- The paragraphs of the note are displayed. 
-
-
-
-# Learn how to work with Hive
-
-## Open and run the fourth and fifth Tutorial note in the notebook
-
-### **STEP 1**: Click on the Notebook tab.  Then click on Tutorial 4 to open it. 
-
-- ![](images/300/snap0011993.jpg) 
-
-### **STEP 2**: Read and follow the instructions in Tutorial 4
-
-- The paragraphs of the note are displayed. 
-
-### **STEP 3**: Click on the Notebook tab.  Then click on Tutorial 5 to open it. 
-
-- ![](images/300/snap0011994.jpg) 
-
-### **STEP 4**: Read and follow the instructions in Tutorial 5
-
-- The paragraphs of the note are displayed. 
 
 
 
 # Learn how to work with Spark and Spark SQL
 
-## Open and run the sixth and seventh Tutorial note in the notebook
+## Open and run the Tutorial 4 note in the notebook
 
-### **STEP 1**: Click on the Notebook tab.  Then click on Tutorial 6 to open it. 
+### **STEP 1**: Click on the Notebook tab.  Then click on the Working with the Spark Interpreter tutorial to open it. 
 
-- ![](images/300/snap0011995.jpg) 
+![](images/300/snap0012204.jpg) 
 
-### **STEP 2**: Read and follow the instructions in Tutorial 6
-
-- The paragraphs of the note are displayed. 
-
-### **STEP 3**: Click on the Notebook tab.  Then click on Tutorial 7 to open it. 
-
-- ![](images/300/snap0011996.jpg) 
-
-### **STEP 4**: Read and follow the instructions in Tutorial 7
-
-- The paragraphs of the note are displayed. 
+### **STEP 2**: Read and follow the instructions in the Tutorial
 
 
-# Learn how to work with Object Store 
+![](images/300/snap0012206.jpg)
 
-## Open and run the eighth Tutorial note in the notebook
 
-### **STEP 1**: Click on the Notebook tab.  Then click on Tutorial 8 to open it. 
+# Learn how to work with Maps with Spark and Zeppelin
 
-- ![](images/300/snap0011997.jpg) 
+## Open and run the Tutorial 5 note in the notebook
 
-### **STEP 2**: Read and follow the instructions in Tutorial 8
+### **STEP 1**: Click on the Notebook tab.  Then click on the Working with Spark and Maps tutorial to open it. 
 
-- The paragraphs of the note are displayed. 
+![](images/300/snap0012207.jpg) 
+
+### **STEP 2**: Read and follow the instructions in the Tutorial
+
+
+![](images/300/snap0012208.jpg)
+
+
+# Check out a bonus demonstration using Spark with Presidential Speeches
+
+## Open and run the Demonstration Presidential Speeches note in the notebook
+
+### **STEP 1**: Click on the Notebook tab.  Then click on the Demonstration Presidential Speeches with Spark and Spark SQL note to open it. 
+
+![](images/300/snap0012209.jpg) 
+
+### **STEP 2**: Read and follow the instructions in the note
+
+
+![](images/300/snap0012210.jpg)
 
 
 
 # What you Learned
 
-- Learned how to import notes into the BDCS-CE Notebook
-- Learned how to work with the BDCS-CE Notebook
-- Learned how to work with Hive
 - Learned how to work with Spark and Spark SQL
-- Learned how to work with Oracle Cloud Storage Object Store
+- Learned how to work with Maps and Spark and Zeppelin
 
 # Next Steps
 
-- Run some of the demonstration notes in the Notebook
 - Experiment with your own data.  Load it into the Object Store, define Spark or Hive tables against it, and run queries against your data.
 - Proceed to the next Lab to learn how to add Oracle Event Hub Cloud Service to the architcture and how to leverage Spark Streaming
