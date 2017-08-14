@@ -5,7 +5,7 @@ Updated: August 13, 2017 for BDCSCE Version 17.3.3-20
 
 This lab will walk you through getting to know **Oracle Big Data Cloud Service - Compute Edition (BDCS-CE)**.  
 
-You will use the Notebook feature of BDCS-CE to run a series of tutorials that show you different aspects of functionality.  In this lab, you will learn how to work with the **Zeppelin Notebook**.  You will also be introduced to the New York City Citi Bike dataset that we will use for experimentation.  You will see how we can download some sample data and upload it to the **Oracle Cloud Storage Object Store**.  And finally, another tutorial will show you to interact with **Hive**.   
+You will use the Notebook feature of BDCS-CE to run a series of tutorials that show you different aspects of functionality.  In this lab, you will learn how to work with the **Zeppelin Notebook**.  You will also be introduced to the New York City Citi Bike dataset that we will use for experimentation.  You will see how we can download some sample data and upload it to the **Oracle Cloud Storage Object Store**.  And finally, another tutorial will show you how to interact with **Hive**.   
 
 Notebooks are used to explore and visualize data in an iterative and easily documented fashion. Oracle Big Data Cloud Service - Compute Edition uses Apache Zeppelin as its notebook interface and coding environment.  Information about Zeppelin can be found here: [https://zeppelin.apache.org/](https://zeppelin.apache.org/) .  To see examples of notes created and shared by other Zeppelin users, see [https://www.zeppelinhub.com/viewer](https://www.zeppelinhub.com/viewer) .
 
@@ -22,8 +22,6 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 - A running BDCS-CE instance and Storage Cloud Object Store instance, created as per the instructions in lab 100.  These instructions included the use of a special "bootstrap.sh" script which setup the BDCS-CE environment for this workshop.
 
-
-
 ## Connect to the BDCS-CE Console
 
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
@@ -39,8 +37,6 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 - Launch the Big Data Cluster Console for your BDCS-CE cluster.  If this is your first time, you will likely need to allow your browser to accept the self-signed certificate for the web console application.
 - You will be asked to provide a username/password.  Use the username and password you defined earlier when you created the BDCS-CE instance (the username defaults to bdcsce_admin).  If you are an Oracle Employee/Partner using a GSE "deal server" pre-provisioned environment, the un/pw will be set to bdcsce_admin/Welcome321
   ![](images/300/firstLogin.gif)
-
-
 
 # Learn the basics of the BDCS-CE Notebook
 
