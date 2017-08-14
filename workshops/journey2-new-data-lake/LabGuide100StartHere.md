@@ -58,11 +58,11 @@ You are **strongly** advised to name your container "journeyC" (case-sensitive).
 
 ## Upload the bootstrap.sh file to the container
 
-### **STEP 1**: Download the bootstrap.sh file to your computer and save it in a directory you can easily find.
+### **STEP 1**: Download the bootstrap.zip file to your computer, unzip it, and save the bootstrap.sh file in a directory you can easily find.
 
-Download the bootstrap.sh file from here: [https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/100/bootstrap.sh](https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/100/bootstrap.sh)
+Download the bootstrap.zip file from here: [https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/100/bootstrap.zip](https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/100/bootstrap.zip)
 
-If the contents of this file are displayed in your browser (as compared to being downloaded/saved as a file), you may need to use your browser's File..Save Page As.. feature to get it written to a file on your computer.
+Be sure to unzip the bootstrap.zip file to extract/save the bootstrap.sh file to a directory on your local computer.
 
 
 ### **STEP 2**: Click on the journeyC container to open it.  Click on Upload Objects.  Select the bootstrap.sh file.  
