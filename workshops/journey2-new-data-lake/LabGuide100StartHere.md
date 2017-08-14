@@ -1,6 +1,6 @@
 ![](images/100/100.JPG)  
 
-Updated: Auggust 13, 2017 for BDCS-CE Version 17.3-3-20
+Updated: August 13, 2017 for BDCS-CE Version 17.3-3-20
 
     
 
@@ -55,7 +55,6 @@ Next, we will create a container in the Storage Cloud to hold the files and data
 You are **strongly** advised to name your container "journeyC" (case-sensitive).  The code snippets in the workshop expect the container to use this name.  If you use a different container name, you will need to manually change the container name in some of our provided code examples.  And if you choose your own container name, do not use an underscore in the name.
 
 ![](images/100/StorageContainer.gif) 
-
 
 ## Upload the bootstrap.sh file to the container
 
