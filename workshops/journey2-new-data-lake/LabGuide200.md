@@ -46,7 +46,12 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 ![](images/200/snap0012200.jpg) 
 
+
 ### **STEP 2**: Scroll down to the Tutorial 1 Notebook Basics and click on the title.
+
+**You should see approximately 20 notes listed.  If you do not, then the bootstrap.sh script did not work correctly.  See the instructions in Lab100 for the proper way to upload the bootstrap.sh script to the Storage Cloud before creating your BDSC-CE instance**
+
+
 
 ![](images/200/snap0012201.jpg) 
 
