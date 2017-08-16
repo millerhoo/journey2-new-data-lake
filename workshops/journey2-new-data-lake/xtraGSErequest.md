@@ -117,4 +117,4 @@ Click on the ![](images/100GSE/picture-15.png)  icon next the myBDCSCE service, 
 
 ## Begin Your Big Data Journey
 
-Follow the instructions in [Lab100 StartHere](LabGuide200StartHere.md) and create a new BDCSCE instance on your own. 
+Follow the instructions in [Lab100 StartHere](LabGuide100StartHere.md) and create a new BDCSCE instance on your own. 

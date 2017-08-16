@@ -53,6 +53,12 @@
                 "description": "Oracle Employee instructions to get access to a GSE/demo.oracle.com Oracle Public Cloud demo environment"
             },
             {
+                "number": "954",
+                "filename": "xtraRunBootstrap.md",
+                "title": "xtra: Running Bootstrap.sh Manually",
+                "description": "Instructions in case you need to run Bootstrap.sh manually"
+            },
+            {
                 "number": "9999",
                 "filename": "Cleanup.md",
                 "title": "Cleanup",

@@ -1,5 +1,5 @@
 ![](images/200/200.JPG)  
-Updated: August 13, 2017 for BDCSCE Version 17.3.3-20
+Updated: August 16, 2017 for BDCSCE Version 17.3.3-20
 
 ## Introduction
 
@@ -49,7 +49,11 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 ### **STEP 2**: Scroll down to the Tutorial 1 Notebook Basics and click on the title.
 
-**You should see approximately 20 notes listed.  If you do not, then the bootstrap.sh script did not work correctly.  See the instructions in Lab100 for the proper way to upload the bootstrap.sh script to the Storage Cloud before creating your BDSC-CE instance**
+**You should see approximately 20 notes listed.  If you do not, then the bootstrap.sh script did not work correctly.**
+
+**Due to a <a href="http://docs.oracle.com/en/cloud/paas/big-data-compute-cloud/csbdk/index.html#CSBDK-GUID-B6DA8EA4-7025-46C1-804C-42A067D1EA9C" target="_blank">known issue</a> with BDCS 17.3, users in the "US Commercial 2" data center will face an issue where bootstrap.sh did not run.**
+
+**In any case, if you do not see the tutorial notes (i.e. bootstrap.sh did not run correctly), please refer to the [xtra Running bootstrap.sh](xtraRunBootstrap.md) lab.  Follow the instructions in that lab, then return here.**
 
 
 
