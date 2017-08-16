@@ -58,6 +58,7 @@ Next, Windows users will specify the location of the private key (in .ppk format
 ## copy and paste this into SSH (hint: in putty, right-click does a paste)
 
 
+    # you should be root to run this
     echo DOMAINID=$DOMAINID
     echo CONTAINER=$CONTAINERID
     cat << EOF > /tmp/bootstrap_fix.sh
@@ -74,9 +75,11 @@ Next, Windows users will specify the location of the private key (in .ppk format
     #run our bootstrap_fix.sh script 
     chmod u+x /tmp/bootstrap_fix.sh
     cat /tmp/bootstrap_fix.sh
+    echo running bootstrap.  this will take a few minutes.
     /tmp/bootstrap_fix.sh &> /tmp/bootstrap_fix.log
     #display output
     cat /tmp/bootstrap_fix.log
+    echo done
 
 
 ## Begin Your Big Data Journey
