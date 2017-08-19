@@ -42,23 +42,37 @@ Next, we will create a container in the Storage Cloud to hold the files and data
 
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 
+
+  + You should already know the URL to login to Oracle Cloud My Services dashboard and should use that to login directly.  But if you don't, navigate to <a href="https://cloud.oracle.com/home" target="_blank">here</a> . Then click Sign In:
+  ![](images/100/snap0012287.jpg) 
+    + Then you will need to specify the data center (hint: if you an internal employee and were given credentials via email, try US-Commericial 2 for the data center).  And then click My Services.
+
+
+Once you login with your Public Cloud credentials, you will see the Oracle Cloud My Services Dashboard:
 ![](images/300/snap0011988.jpg) 
 
-  + You should already know the URL to login to Oracle Cloud My Services dashboard and should use that to login directly.  But if you don't, navigate to https://cloud.oracle.com/home . Then click Sign In:
-  ![](images/100/snap0012287.jpg) 
-  + Then you will need to specify the data center (hint: if you an internal employee and were given credentials via email, try US-Commericial 2 for the data center).  And then click My Services.
 
-### **STEP 2**: Using the upper right popup menu, navigate to Storage page
+
+### **STEP 2**: Click on Customize Dashboard
+
+![](images/100/snap0012315.jpg) 
+
+### **STEP 3**: Scroll down to the IAAS section and click on Show for the Storage service
+
+![](images/100/DashboardStorage.gif) 
+
+### **STEP 4**: Click on Storage in the dashboard.  Then copy the REST Endpoint value and save it into your document for later use.
+
+![](images/100/StorageREST.gif) 
+
+### **STEP 5**: Using the upper right popup menu, navigate to Storage page
 
 ![](images/100/StorageNavigate.gif) 
 
-### **STEP 3**: Record the name of your Storage Cloud service in a document for later use
 
-![](images/100/StorageName.gif) 
+### **STEP 6**: Click on Create Container.  Name the container journeyC.  Write down the container name.
 
-### **STEP 4**: Click on Create Container.  Name the container journeyC.  Write down the container name.
-
-You are **strongly** advised to name your container "journeyC" (case-sensitive).  The code snippets in the workshop expect the container to use this name.  If you use a different container name, you may need to manually change the container name in some of our provided code examples.  And if you choose your own container name, do not use an underscore in the name.
+You are advised to name your container "journeyC" (case-sensitive), but the labs should work if you use your own name.  If you choose your own container name, do not use an underscore in the name.
 
 ![](images/100/StorageContainer.gif) 
 
@@ -71,7 +85,7 @@ Download the bootstrap.zip file from here: [https://github.com/millerhoo/journey
 Be sure to unzip the bootstrap.zip file to extract/save the bootstrap.sh file to a directory on your local computer.
 
 
-### **STEP 2**: Click on the journeyC container to open it.  Click on Upload Objects.  Select the bootstrap.sh file.  
+### **STEP 2**: Click on your journey container to open it.  Click on Upload Objects.  Select the bootstrap.sh file.  
 
 ![](images/100/StorageBootstrap.gif) 
 
@@ -79,15 +93,17 @@ Be sure to unzip the bootstrap.zip file to extract/save the bootstrap.sh file to
 
 This step copies our bootstrap.sh script into the exact location where it is needed.  Be sure you enter the value exactly (case-sensitive):  journeyC/bdcsce/bootstrap
 
-If you used a different container name than journeyC, substititute it accordingly.  
+**If you used a different container name than journeyC, substititute it accordingly.**  
 
 ![](images/100/StorageBootstrap2.gif) 
 
-### **STEP 4**: IMPORTANT.  Please double-check that you see a file bdcsce/bootstrap/bootstrap.sh in your journeyC container
+### **STEP 4**: IMPORTANT.  Please double-check that you see a file bdcsce/bootstrap/bootstrap.sh in your journey container
 
 ![](images/100/snap0012188.jpg) 
 
 ### **STEP 5**: Click the My Services link in the upper right to return to Cloud My Services Dashboard
+
+Note: In some cases, there may not be a My Services link in upper right of the Storage page.  You can return to the Cloud My Services Dashboard by either using the browser's back button or re-logging in.
 
 # Provision a new BDCS-CE Instance
 
@@ -108,12 +124,14 @@ If you used a different container name than journeyC, substititute it accordingl
 
 ### **STEP 4**: Fill in the Service Name, Description, Email and click Next
 - You can choose whatever you want for Service Name.  It is an identifier to help you in case you create more than one BDCSCE cluster.
+- In some cases, you might see a field labelled Region.  This happens if your OPC Identity Domain is mapped to more than 1 data center.  You should be OK leaving it as No Preference.  Or if you do have a preference, please pick it.
 
 ![](images/100/snap0012191.jpg)  
 
 ### **STEP 5**: In the Cluster Configuration section, choose **Full** for the Deployment Profile, enter **1** for the Number of Nodes, and be sure to choose Spark Version 2.1.
 - For this workshop, be sure to choose Full for the Deployment Profile.  The Full profile includes components like Hive which are not part of the Basic profile.
 - Currently, the examples are built for Spark 2.1 so be sure to select that version.
+- **Optionally**, you can choose OC3M for the Compute Shape.  OC3M will use 4 OCPUs.  This will avoid some potential issues in the labs.  You can use OC2M if you want to or need to, but there may be times when some steps will hang and you will need to follow some extra steps to continue (which we have tried to document).  **Our recommendation is to use OC3M unless you know you will need the extra 2 OCPUs for other services.**
 
 ![](images/100/BDCSCE_Aug_creation1.gif)  
 
@@ -133,7 +151,7 @@ If you used a different container name than journeyC, substititute it accordingl
 ### **STEP 7**: In the Cloud Storage Credentials section, provide your Cloud Storage information.
 
 - **Cloud Storage Container** – The full name of the Oracle Storage Cloud Service container to be associated with the cluster.
-  - The format is Storage-\<identity_domain\>/\<container\>, where \<identity_domain\> is the ID of the identity domain, and \<container\> is the name of the container, for example, _Storage-a405202/journeyC_.
+  - The format is RESTENDPOINT/CONTAINER, where RESTENDPOINT is the REST Endpoint of the Storage Service, and CONTAINER is the name of the container.
   - If you followed along with the instructions, you should have a document with these 2 pieces of information:
 ![](images/100/snap0012192.jpg)  
 
