@@ -35,7 +35,7 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 ### **STEP 3**: Launch the Big Data Cluster Console
 
 - Launch the Big Data Cluster Console for your BDCS-CE cluster.  If this is your first time, you will likely need to allow your browser to accept the self-signed certificate for the web console application.
-- You will be asked to provide a username/password.  Use the username and password you defined earlier when you created the BDCS-CE instance (the username defaults to bdcsce_admin).  If you are an Oracle Employee/Partner using a GSE "deal server" pre-provisioned environment, the un/pw will be set to bdcsce_admin/Welcome321
+- You will be asked to provide a username/password.  Use the username and password you defined earlier when you created the BDCS-CE instance (the username defaults to bdcsce_admin). 
   ![](images/300/firstLogin.gif)
 
 # Learn the basics of the BDCS-CE Notebook

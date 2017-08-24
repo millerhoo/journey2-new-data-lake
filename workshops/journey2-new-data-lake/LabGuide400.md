@@ -63,7 +63,7 @@ It may be listed in "Event Hub - Dedicated" in some versions.
 - Deployment Type: Choose Basic, which uses the least resources and is typical for development and test.
 - SSH Public Key: You can use an existing key or create a new one.  Refer to the BDCS-CE or OEHCS documentation for more about working with SSH keys.
 - Number of Nodes: Choose 1 for this lab.
-- Compute Shape: Choose the smallest shape as that is all that is needed for this lab.
+- Compute Shape: Choose the smallest shape as that is all that is needed for this lab. It defaults to OC2M, but you can choose OC1M for this journey.
 - Enable Rest Access: You can leave it unchecked as you don't need REST access in this lab.
 
 ![](images/400/OEHCSplatform.gif) 
@@ -80,7 +80,9 @@ It may be listed in "Event Hub - Dedicated" in some versions.
 
 ![](images/400/snap0012003.jpg) 
 
-# Create your first OEHCS topic
+# Create your first OEHCS topic (optional)
+
+**The "Create your first OEHCS topic" step is optional.  When you continue to the next Lab in the New Data Lake Journey, you will create a new OEHCS topic so you can wait till then if you want.**
 
 In this section, we will create a new Kafka topic in OEHCS.  Before we do so, a quick comment about OEHCS terminology.  The "OEHCS Platform" is the terminology for your dedicated OEHCS cluster.  A cluster will manage multiple topics.  We refer to individual topics as instances of "OEHCS".  Thus, to create a new topic you will create a new instance of "OEHCS" to run on the "OEHCS Platform" (dedicated cluster) you already created.
 
