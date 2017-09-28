@@ -1,11 +1,22 @@
 #!/bin/bash
 #
-# Install Zeppelin
+# Install Zeppelin for DBCS.
+# run this script as root
 #
-# Run as root
+# Set/Confirm these variables before running
+cdbname=ORCL
+pdbname=PDB1
+identitydomain=gse00002281
 
-# set this to your tnsalias
-tnsalias=PDB1
+
+# Download/run this file via:
+# sudo bash
+# wget -nc https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/DB/install_zeppelin_dbcs.sh
+# EDIT install_zeppelin_dbcs.sh and set/confirm pdbname,cdbname,identitydomain
+# chmod u+x install_zeppelin_dbcs.sh
+# ./install_zeppelin_dbcs.sh
+
+
 
 
 echo "Running Install Zeppelin for DBCS as $USER"
@@ -20,6 +31,20 @@ if grep -q zeppelin /etc/sudoers; then
   echo "This script appears to have already run.  Exiting."
   exit
 fi
+
+echo "."
+echo "."
+echo "."
+echo "cdbname=$cdbname"
+echo "pdbname=$pdbname"
+echo "identitydomain=$identitydomain"
+echo "."
+  a=""
+  while [ "$a" != "y" ] && [ "$a" != "n" ]; do
+    echo "Is this absolutely correct [y/n]"
+    read a
+  done
+  [ "$a" == "n" ] && exit 0
 
 
 echo "setting up sudoers for zeppelin"
@@ -68,8 +93,12 @@ sudo -u oracle -i $thirdparty_root/zeppelin-${zeppelin_version}-bin-all/bin/zepp
 
 
 # wait a few minutes...
-echo "Waiting a minute for zeppelin to warm up"
-sleep 60
+echo "Waiting a minute for zeppelin to warm up before calling its API"
+sleep 30
+# warm up zeppelin.  first API call does not always work
+curl -X GET -H "Content-Type: application/json" http://127.0.0.1:9090/api/notebook
+sleep 30
+
 
 
 # import notebooks
@@ -77,9 +106,12 @@ sleep 60
 echo "importing lab notebooks"
 mkdir /tmp/notebooks
 cd /tmp/notebooks
-wget -nc https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/DBCS/DBNotes.zip
+wget -nc https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/DB/DBNotes.zip
 unzip DBNotes.zip
-sed -i -- "s/PDB1/$tnsalias/g" *.json
+# search replace cdbname pdbname identitydomain 
+sed -i -- "s/PDB1/$pdbname/g" *.json
+sed -i -- "s/ORCL/$cdbname/g" *.json
+sed -i -- "s/gse00002281/$identitydomain/g" *.json
 for note in /tmp/notebooks/*.json
 do
   echo $note
@@ -107,7 +139,7 @@ def post_request(url, body):
  
  
 import json, urllib2
-zeppelin_int_url = 'http://127.0.0.1:9995/api/interpreter/setting/'
+zeppelin_int_url = 'http://127.0.0.1:9090/api/interpreter/setting/'
 data = json.load(urllib2.urlopen(zeppelin_int_url))
 for body in data['body']:
   if body['group'] == 'sh':
@@ -126,6 +158,10 @@ cat /tmp/sh_settings.py
 python /tmp/sh_settings.py
 
 
+echo "."
+echo "."
+echo "."
+echo "."
 echo "Script done."
 echo "."
 echo "."
@@ -133,4 +169,4 @@ echo "If you want to stop zeppelin, run..."
 echo "sudo -u oracle -i $thirdparty_root/zeppelin-${zeppelin_version}-bin-all/bin/zeppelin-daemon.sh stop"
 echo "."
 echo "."
-echo "Now setup SSH tunneling for port 9090.  Then access Zeppelin at http://127.0.0.1:9090/"
+echo "You can now setup SSH tunneling for port 9090.  Then access Zeppelin at http://127.0.0.1:9090/"
