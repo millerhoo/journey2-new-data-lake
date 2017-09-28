@@ -93,11 +93,19 @@ sudo -u oracle -i $thirdparty_root/zeppelin-${zeppelin_version}-bin-all/bin/zepp
 
 
 # wait a few minutes...
-echo "Waiting a minute for zeppelin to warm up before calling its API"
+echo "Waiting two minute for zeppelin to warm up before calling its API"
 sleep 30
+echo "."
+sleep 30
+echo "."
+sleep 30
+echo "."
+sleep 30
+echo "."
 # warm up zeppelin.  first API call does not always work
 curl -X GET -H "Content-Type: application/json" http://127.0.0.1:9090/api/notebook
-sleep 30
+echo "."
+sleep 15
 
 
 
@@ -116,6 +124,7 @@ for note in /tmp/notebooks/*.json
 do
   echo $note
   curl -X POST -d @"$note" -H "Content-Type: application/json" http://127.0.0.1:9090/api/notebook/import
+  echo "."
 done
 
 # fix sh interpreter timeout and spark kafka dependency
@@ -154,7 +163,7 @@ shbody['properties']['shell.command.timeout.millisecs'] = '3000000'
 post_request(zeppelin_int_url + shbody['id'], shbody)
 
 EOF
-cat /tmp/sh_settings.py
+#cat /tmp/sh_settings.py
 python /tmp/sh_settings.py
 
 
