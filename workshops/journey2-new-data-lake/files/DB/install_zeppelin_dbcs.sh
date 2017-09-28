@@ -129,9 +129,9 @@ do
   echo "."
 done
 
-# fix sh interpreter timeout and spark kafka dependency
+# fix sh interpreter timeout 
 # https://zeppelin.apache.org/docs/0.7.0/rest-api/rest-interpreter.html
-echo "fixing sh interpreter timeout and spark kafka dependency"
+echo "fixing sh interpreter timeout"
 cat <<EOF > /tmp/sh_settings.py
 #!/usr/local/bin/python
 #based on https://community.hortonworks.com/articles/36031/sample-code-to-automate-interacting-with-zeppelin.html by Ali Bajwa
