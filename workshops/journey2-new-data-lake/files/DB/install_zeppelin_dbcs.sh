@@ -50,8 +50,8 @@ echo "."
 echo "setting up sudoers for zeppelin"
 echo 'zeppelin  ALL=(ALL)  NOPASSWD: ALL' >> /etc/sudoers
 echo 'oracle  ALL=(ALL)  NOPASSWD: ALL' >> /etc/sudoers
-echo "last 10 lines of /etc/sudoers"
-tail -10 /etc/sudoers
+#echo "last 10 lines of /etc/sudoers"
+#tail -10 /etc/sudoers
 
 	#  clean yum
 #echo "cleaning up yum metadata just in case"
@@ -87,13 +87,15 @@ sudo -u oracle cp $thirdparty_root/zeppelin-${zeppelin_version}-bin-all/conf/zep
 sed -i -- "s/8080/9090/g" $thirdparty_root/zeppelin-${zeppelin_version}-bin-all/conf/zeppelin-site.xml
 
 # start zeppelin
+echo "."
+echo "."
 echo "Starting zeppelin"
 echo "sudo -u oracle -i $thirdparty_root/zeppelin-${zeppelin_version}-bin-all/bin/zeppelin-daemon.sh start"
 sudo -u oracle -i $thirdparty_root/zeppelin-${zeppelin_version}-bin-all/bin/zeppelin-daemon.sh start
-
+echo "."
 
 # wait a few minutes...
-echo "Waiting two minute for zeppelin to warm up before calling its API"
+echo "Waiting two minutes for zeppelin to warm up before calling its API"
 sleep 30
 echo "."
 sleep 30
