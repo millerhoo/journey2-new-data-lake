@@ -51,9 +51,7 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 **You should see approximately 20 notes listed.  If you do not, then the bootstrap.sh script did not work correctly.**
 
-**Due to a <a href="http://docs.oracle.com/en/cloud/paas/big-data-compute-cloud/csbdk/index.html#CSBDK-GUID-B6DA8EA4-7025-46C1-804C-42A067D1EA9C" target="_blank">known issue</a> with BDCS 17.3, users in the "US Commercial 2" data center will face an issue where bootstrap.sh did not run.**
-
-**In any case, if you do not see the tutorial notes (i.e. bootstrap.sh did not run correctly), please refer to the [xtra Running bootstrap.sh](xtraRunBootstrap.md) lab.  Follow the instructions in that lab, then return here.**
+**If you do not see the ~20 tutorial notes (i.e. bootstrap.sh did not run correctly), most likely there was a problem with how you uploaded the bootstrap.sh and/or the exact syntax you specified for the Storage Cloud location when you provisioned your BDCS-CE instance.  Sorry, but you will need to delete your instance and re-follow the Lab 100 instructions again paying close attention to the instructions around bootstrap and Storage Cloud.**
 
 
 

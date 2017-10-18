@@ -54,6 +54,29 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 ![](images/300/snap0012206.jpg)
 
+## OPTIONAL: Open and run Tutorials 4b and 4c in the notebook
+
+These optional tutorials show you how to add additional datasets (such as weather) and then start to visualize them with Oracle Data Visualization Desktop
+
+### **STEP 1**: Click on the Notebook tab.  Then click on the Adding more datasets tutorial to open it. 
+
+![](images/300/snap0012851.jpg) 
+
+### **STEP 2**: Read and follow the instructions in the Tutorial
+
+![](images/300/snap0012852.jpg)
+
+### **STEP 3**: Click on the Notebook tab.  Then click on the Getting Started with DV Desktop tutorial to open it. 
+
+![](images/300/snap0012853.jpg) 
+
+### **STEP 4**: Read and follow the instructions in the Tutorial
+
+![](images/300/snap0012854.jpg)
+
+
+
+
 
 # Learn how to work with Maps with Spark and Zeppelin
 
