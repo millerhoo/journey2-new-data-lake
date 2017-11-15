@@ -3,18 +3,18 @@
 echo "Running bootstrap for Big Data User Journeys"
 
 # check to see if we are running this manually (DOMAINID will be set)
-if [[ -z "$DOMAINID" ]]
-then
-  echo Did not detect DOMAINID.  This is being run automatically.
+#if [[ -z "$DOMAINID" ]]
+#then
+#  echo Did not detect DOMAINID.  This is being run automatically.
   default_container=$(getDefaultContainer)
   objectStoreURL=$(getBaseObjectStoreUrl)
-else
-  echo Detected DOMAINID=$DOMAINID.  This is being run manually.
-  echo CONTAINER=$CONTAINER
-  default_container=$CONTAINER
-  default_full_container=Storage-$DOMAINID/$CONTAINER
-  objectStoreURL=swift://$CONTAINER.default
-fi
+#else
+#  echo Detected DOMAINID=$DOMAINID.  This is being run manually.
+#  echo CONTAINER=$CONTAINER
+#  default_container=$CONTAINER
+#  default_full_container=Storage-$DOMAINID/$CONTAINER
+#  objectStoreURL=swift://$CONTAINER.default
+#fi
 
 
 #  setup sudo for zeppelin
@@ -30,6 +30,7 @@ yum clean metadata
 # install helper tool: locate
 echo "installing mlocate"
 yum install -y mlocate
+updatedb
 
 # making utility script
 echo "setting up object_store_env.sh"
