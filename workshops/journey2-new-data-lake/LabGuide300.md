@@ -1,9 +1,9 @@
 ![](images/300/300.JPG)  
-Updated: August 13, 2017 for BDCSCE Version 17.3.1-20
+Updated: December 20, 2017 for BDC Version 17.4.6
 
 ## Introduction
 
-This lab will walk you through additional features of **Oracle Big Data Cloud Service - Compute Edition (BDCS-CE)**.  
+This lab will walk you through additional features of **Oracle Big Data Cloud**.  
 
 In particular, this lab will focus on interacting with **Spark** and **Spark SQL**. 
 
@@ -17,18 +17,18 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 ## Required Artifacts
 
-- A running BDCS-CE instance and Storage Cloud Object Store instance, created as per the instructions in Lab 100.  These instructions included the use of a special "bootstrap.sh" script which setup the BDCS-CE environment for this workshop.
-- You completed the tutorials in Lab 200 Getting to know BDCS-CE
+- A running BDC instance and Storage Cloud Object Store instance, created as per the instructions in Lab 100.  These instructions included the use of a special "bootstrap.sh" script which setup the BDC environment for this workshop.
+- You completed the tutorials in Lab 200 Getting to know Oracle Big Data Cloud
 
 
 
-## Connect to the BDCS-CE Console
+## Connect to the BDC Console
 
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 
 ![](images/300/snap0011988.jpg) 
 
-### **STEP 2**: Navigate to the My Services page for your BDCS-CE cluster
+### **STEP 2**: Navigate to the My Services page for your BDC cluster
 
 ![](images/300/snap0011989.jpg)  
 
@@ -45,11 +45,15 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 ## Open and run the Tutorial 4 note in the notebook
 
-### **STEP 1**: Click on the Notebook tab.  Then click on the Working with the Spark Interpreter tutorial to open it. 
+### **STEP 1**: Click on the Notebook tab. Expand the Journeys folder.  Then expand the New Data Lake folder. 
+
+![](images/200/snap0012200.jpg) 
+
+### **STEP 2**: Click on the Tutorial 4  Working with the Spark Interpreter tutorial to open it. 
 
 ![](images/300/snap0012204.jpg) 
 
-### **STEP 2**: Read and follow the instructions in the Tutorial
+### **STEP 3**: Read and follow the instructions in the Tutorial
 
 
 ![](images/300/snap0012206.jpg)
@@ -58,7 +62,7 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 These optional tutorials show you how to add additional datasets (such as weather) and then start to visualize them with Oracle Data Visualization Desktop
 
-### **STEP 1**: Click on the Notebook tab.  Then click on the Adding more datasets tutorial to open it. 
+### **STEP 1**: Click on the Notebook tab. Expand the Journeys folder.  Then expand the New Data Lake folder. Then click on the Tutorial 4b Adding more datasets tutorial to open it. 
 
 ![](images/300/snap0012851.jpg) 
 
@@ -66,7 +70,7 @@ These optional tutorials show you how to add additional datasets (such as weathe
 
 ![](images/300/snap0012852.jpg)
 
-### **STEP 3**: Click on the Notebook tab.  Then click on the Getting Started with DV Desktop tutorial to open it. 
+### **STEP 3**: Click on the Notebook tab. Expand the Journeys folder.  Then expand the New Data Lake folder. Then click on the Tutorial 4c Getting Started with DV Desktop tutorial to open it. 
 
 ![](images/300/snap0012853.jpg) 
 
@@ -82,7 +86,7 @@ These optional tutorials show you how to add additional datasets (such as weathe
 
 ## Open and run the Tutorial 5 note in the notebook
 
-### **STEP 1**: Click on the Notebook tab.  Then click on the Working with Spark and Maps tutorial to open it. 
+### **STEP 1**: Click on the Notebook tab. Expand the Journeys folder.  Then expand the New Data Lake folder. Then click on the Tutorial 5 Working with Spark and Maps tutorial to open it. 
 
 ![](images/300/snap0012207.jpg) 
 
@@ -96,11 +100,15 @@ These optional tutorials show you how to add additional datasets (such as weathe
 
 ## Open and run the Demonstration Presidential Speeches note in the notebook
 
-### **STEP 1**: Click on the Notebook tab.  Then click on the Demonstration Presidential Speeches with Spark and Spark SQL note to open it. 
+### **STEP 1**: Click on the Notebook tab. Expand the Journeys folder.  Then expand the New Data Lake folder. Then expand the Demos folder. 
+
+![](images/300/snap0013443.jpg) 
+
+### **STEP 2**: Click on the Presidential Speeches with Spark and Spark SQL note to open it. 
 
 ![](images/300/snap0012209.jpg) 
 
-### **STEP 2**: Read and follow the instructions in the note
+### **STEP 3**: Read and follow the instructions in the note
 
 
 ![](images/300/snap0012210.jpg)
