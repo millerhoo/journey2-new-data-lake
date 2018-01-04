@@ -112,7 +112,7 @@ It may be labelled "Oracle Event Hub Cloud Service" in some versions.
 ### **STEP 3**: Fill in the details for your topic and click Next
 
 - Service Name: enter a name like FirstTopic.
-- Hosted On: Select the name of the OEHCS Platform instance you created earlier. 
+- Hosted On: Select the name of the OEHCS Dedicated instance you created earlier. 
 - Partitions: Choose 1 for this exercise.
 ![](images/400/OEHCStopic.gif) 
 

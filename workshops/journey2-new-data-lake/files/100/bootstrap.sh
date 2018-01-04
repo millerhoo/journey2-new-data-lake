@@ -10,6 +10,7 @@ echo "Running bootstrap for Big Data User Journeys"
   objectStoreURL=$(getBaseObjectStoreUrl)
 #else
 #  echo Detected DOMAINID=$DOMAINID.  This is being run manually.
+# NOTE WE NO LONGER SUPPORT RUNNING THIS MANUALLY.  TOO MANY POTENTIAL USER ERRORS.  JUST FOLLOW THE INSTRUCTIONS AND CREATE A NEW BDC INSTANCE
 #  echo CONTAINER=$CONTAINER
 #  default_container=$CONTAINER
 #  default_full_container=Storage-$DOMAINID/$CONTAINER
@@ -23,14 +24,7 @@ echo 'zeppelin  ALL=(ALL)  NOPASSWD: ALL' >> /etc/sudoers
 echo "last 10 lines of /etc/sudoers"
 tail -10 /etc/sudoers
 
-	#  clean yum
-echo "cleaning up yum metadata just in case"
-yum clean metadata
 
-# install helper tool: locate
-echo "installing mlocate"
-yum install -y mlocate
-updatedb
 
 # making utility script
 echo "setting up object_store_env.sh"
@@ -38,6 +32,37 @@ echo "export CONTAINER=$default_container" > ~zeppelin/object_store_env.sh
 echo "export OBJECT_STORE=$objectStoreURL" >> ~zeppelin/object_store_env.sh
 chown zeppelin ~zeppelin/object_store_env.sh
 chmod u+x ~zeppelin/object_store_env.sh
+
+# delete 2 sample notebooks as we have newer ones
+echo "Deleting 2 sample notebooks as we provide newer ones"
+cat <<EOF > /tmp/delete_notebooks.py
+#!/usr/local/bin/python
+#based on https://community.hortonworks.com/articles/36031/sample-code-to-automate-interacting-with-zeppelin.html by Ali Bajwa
+def delete_request(url):
+  import json, urllib2
+  req = urllib2.Request(str(url))
+  req.get_method = lambda: 'DELETE'
+  try:
+    response = urllib2.urlopen(req).read()
+  except urllib2.HTTPError, error:
+    print 'Exception: ' + error.read()
+  jsonresp = json.loads(response.decode('utf-8'))
+  print jsonresp['status']
+
+
+import json, urllib2
+zeppelin_int_url = 'http://127.0.0.1:9995/api/notebook/'
+data = json.load(urllib2.urlopen(zeppelin_int_url))
+for body in data['body']:
+  if body['name'] == ' Tutorial 1 Notebook Basics':
+    body1 = body
+    delete_request(zeppelin_int_url + body1['id'])
+  elif body['name'] == ' Tutorial 2 Working with the Object Store and HDFS':
+    body2 = body
+    delete_request(zeppelin_int_url + body2['id'])
+EOF
+python /tmp/delete_notebooks.py
+
 
 # import notebooks
 # https://zeppelin.apache.org/docs/0.7.0/rest-api/rest-notebook.html#import-a-note
@@ -92,9 +117,17 @@ my_dict = {'groupArtifactVersion':  'org.apache.spark:spark-streaming-kafka-0-8_
 sparkbody['dependencies'].append(my_dict)
 post_request(zeppelin_int_url + sparkbody['id'], sparkbody)
 EOF
-cat /tmp/sh_settings.py
+#cat /tmp/sh_settings.py
 python /tmp/sh_settings.py
 
+#  clean yum
+echo "cleaning up yum metadata just in case"
+yum clean metadata
+
+# install helper tool: locate
+echo "installing mlocate"
+yum install -y mlocate
+updatedb
 
 echo "done with bootstrap for Big Data User Journeys"
 
