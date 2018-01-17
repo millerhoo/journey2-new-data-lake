@@ -46,7 +46,7 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 # Work with OEHCS and Spark Streaming
 
-## Open and run the "OEHCS Tutorial 1 Working with OEHCS and Spark Streaming" Tutorial note in the notebook
+## Open and run the "Tutorial 1 Working with OEHCS and Spark Streaming" Tutorial note in the notebook
 
 ### **STEP 1**: Click on the Notebook tab. Expand the Journeys folder.  Then expand the New Data Lake folder. Then expand the Streaming folder.
 
@@ -70,7 +70,7 @@ Please walk through the paragraphs one by one. Read through the content of the p
 
 # Run the Citi Bike Live Map Demonstration
 
-## Open and run the "OEHCS Demonstration Citi Bike Live Map with Spark Streaming" note in the notebook
+## Open and run the "Citi Bike Live Map with Spark Streaming" note in the notebook
 
 ### **STEP 1**: Click on the Notebook tab. Expand the Journeys folder.  Then expand the New Data Lake folder. Then expand the Streaming folder. Then expand the Demo folder.
 
