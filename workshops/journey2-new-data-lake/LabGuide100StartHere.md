@@ -1,14 +1,14 @@
 ![](images/100/100.JPG)  
 
-Updated: August 16, 2017 for BDCS-CE Version 17.3-3-20
+Updated: March 8, 2018 for BDC Version 18.1.4
 
     
 
 ## Introduction
 
-In this lab, you learn how to provision a **Oracle Big Data Cloud Service - Compute Edition (BDCS-CE)** cluster.  
+In this lab, you learn how to provision a **Oracle Big Data Cloud (BDC)** cluster.  
 
-The Oracle Big Data Cloud Service - Compute Edition (BDCS-CE) enables you to rapidly, securely, and cost-effectively leverage the power of an elastic, integrated Big Data Infrastructure to unlock the value in Big Data.   In this lab, we will walk you through the steps to quickly configure and create a Big Data Cloud Service instance.  When done you will see how to view the configuration and layout of your instance using the Oracle Big Data Console.  
+The Oracle Big Data Cloud Service - Compute Edition (BDC) enables you to rapidly, securely, and cost-effectively leverage the power of an elastic, integrated Big Data Infrastructure to unlock the value in Big Data.   In this lab, we will walk you through the steps to quickly configure and create a Big Data Cloud Service instance.  When done you will see how to view the configuration and layout of your instance using the Oracle Big Data Console.  
 
 Please direct comments to: David Bayard (david.bayard@oracle.com)
 
@@ -29,6 +29,18 @@ Your first step is to get access to the Oracle Public Cloud.  There are a couple
 
 In any case, follow one of the above approaches to obtain access to an Oracle Public Cloud account with the ability (and quota) to create new instances.
 
+# A note about Oracle Cloud Infrastructure and Oracle Cloud Infrastructure Classic
+
+Assuming your cloud account allows it, Oracle Big Data Cloud can be deployed to both OCI and OCI-Classic data centers.  This journey was originally built against Oracle Cloud Infrastructure Classic, but it does work with OCI as well.
+
+The choice of OCI or OCI-Classic is made when you provision a new BDC instance.  There will be a Region drop-down on the first page of the BDC Create Instance screen.  If you choose an OCI region, then you'll use OCI.  If you choose "No Preference", you'll use OCI-Classic.
+
+These provisioning instructions have not been updated for OCI, so the screenshots and instructions will reflect using OCI-Classic.
+
+If you do use OCI, you'll be using the OCI Object Storage service which is distinct from the OCI-Classic Object Store.  The instructions in this document show you how to upload the bootstrap.sh script to the OCI-Classic Object Store.  If using OCI, you'll need to instead use the OCI Console to create a "journeyC" bucket in the OCI Object Store and upload the bootstrap.sh to the "bdcsce/bootstrap/bootstrap.sh" location prior to creating your BDC instance.  You'll also need to complete the pre-requisite steps for running PAAS services in OCI (https://docs.us-phoenix-1.oraclecloud.com/Content/General/Reference/PaaSprereqs.htm).
+
+# Know your identity domain
+
 Write down the name of your Identity Domain in a document as you will need it later: 
 ![](images/100/snap0012186.jpg) 
 
@@ -37,6 +49,8 @@ Write down the name of your Identity Domain in a document as you will need it la
 # Create a container in the Storage Cloud and upload a file
 
 Next, we will create a container in the Storage Cloud to hold the files and data used by this workshop.  This container will be the "default" container used by the BDCS-CE instance we will create.  And we will upload to this container a special "bootstrap.sh" file that will be used to customize our BDCS-CE instance as it is provisioned.
+
+If you are using OCI (instead of OCI-Classic), be sure to to read the note above about OCI and OCI-Classic as the instructions in this section do not apply to OCI.
 
 ## Create a new Storage Cloud Object Store container
 
@@ -105,9 +119,9 @@ This step copies our bootstrap.sh script into the exact location where it is nee
 
 Note: In some cases, there may not be a My Services link in upper right of the Storage page.  You can return to the Cloud My Services Dashboard by either using the browser's back button or re-logging in.
 
-# Provision a new BDCS-CE Instance
+# Provision a new BDC Instance
 
-## Provision BDCS-CE
+## Provision BDC
 
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 
@@ -124,12 +138,13 @@ Note: In some cases, there may not be a My Services link in upper right of the S
 
 ### **STEP 4**: Fill in the Service Name, Description, Email and click Next
 - You can choose whatever you want for Service Name.  It is an identifier to help you in case you create more than one BDCSCE cluster.
-- In some cases, you might see a field labelled Region.  This happens if your OPC Identity Domain is mapped to more than 1 data center.  You should be OK leaving it as No Preference.  Or if you do have a preference, please pick it.
+- In some cases, you might see a field labelled Region.  This happens if your OPC Identity Domain is mapped to more than 1 data center.  You should be OK leaving it as No Preference.  Note: if you pick an OCI data center, be sure to read the note at the top of these instructions about OCI and OCI-Classic.
 
 ![](images/100/snap0012191.jpg)  
 
 ### **STEP 5**: In the Cluster Configuration section, choose **Full** for the Deployment Profile, enter **1** for the Number of Nodes, and be sure to choose Spark Version 2.1.
 - For this workshop, be sure to choose Full for the Deployment Profile.  The Full profile includes components like Hive which are not part of the Basic profile.
+- We suggest you choose the Number of Nodes as 1 as that is sufficient to run the journey.  Keeping the number of nodes small will reduce your costs or allow your trial to last longer.
 - Currently, the examples are built for Spark 2.1 so be sure to select that version.
 - **Optionally**, you can choose OC3M for the Compute Shape.  OC3M will use 4 OCPUs.  This will avoid some potential issues in the labs.  You can use OC2M if you want to or need to, but there may be times when some steps will hang and you will need to follow some extra steps to continue (which we have tried to document).  **Our recommendation is to use OC3M unless you know you will need the extra 2 OCPUs for other services.**
 
@@ -137,6 +152,7 @@ Note: In some cases, there may not be a My Services link in upper right of the S
 
 ### **STEP 6**: In the Credentials section, define your SSH public key and the desired username/password to use for the BDCS-CE cluster administrator.
 
+- **Use IDCS (Identity Management)**: The instructions were written assuming you are NOT using IDCS, but the journey should work fine if you do select to use IDCS.  There are a few differences- mostly around connecting to Hive/Spark via JDBC- but we will try to document them in the appropriate places.  Currently, this option only appears in OCI-Classic data centers.
 - **SSH Public Key**: There are various approaches you can use.  You can define a value for a VM Public Key, use a file with a VM Public Key or create a new key.
   - The easiest choice if new to this environment may be to create a new key.
   - Choose to Create a New Key and hit the Enter button.
@@ -200,7 +216,7 @@ Sections include:
 ![](images/100/BDCSCE_Aug_creation3.gif) 
 
 ### **STEP 15**: Review the Access Rules for your cluster
-For now, you don't need to make changes to the default Access Rules.  In a later tutorial, we will use this to allow SSH access.  This is also the place where you can enable Ambari access (port 8080) which is disabled by default.
+For now, you don't need to make changes to the default Access Rules.  In a later tutorial, we will use this to allow SSH access.  This is also the place where you can enable Ambari access (port 8080) which is disabled by default.  Note: There is no Access Rules option for OCI deployments as you control network access in OCI using the normal OCI VCN Security List functionality.
 ![](images/200/AccessRules.gif)  
 
 ### **STEP 16**: Access the Big Data Cluster Console
