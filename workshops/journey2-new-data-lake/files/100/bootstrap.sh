@@ -26,12 +26,7 @@ tail -10 /etc/sudoers
 
 
 
-# making utility script
-echo "setting up object_store_env.sh"
-echo "export CONTAINER=$default_container" > ~zeppelin/object_store_env.sh
-echo "export OBJECT_STORE=$objectStoreURL" >> ~zeppelin/object_store_env.sh
-chown zeppelin ~zeppelin/object_store_env.sh
-chmod u+x ~zeppelin/object_store_env.sh
+
 
 # delete 2 sample notebooks as we have newer ones
 echo "Deleting 2 sample notebooks as we provide newer ones"
@@ -71,7 +66,8 @@ mkdir /tmp/notebooks
 cd /tmp/notebooks
 wget -nc https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/Notes.zip
 unzip Notes.zip
-sed -i -- "s/journeyC/$default_container/g" *.json
+sed -i -- "s~swift://\$CONTAINER.default~$objectStoreURL~g" *.json
+sed -i -- "s~swift://journeyC.default~$objectStoreURL~g" *.json
 for note in /tmp/notebooks/*.json
 do
   echo $note
@@ -84,6 +80,7 @@ echo "fixing sh interpreter timeout and spark kafka dependency"
 cat <<EOF > /tmp/sh_settings.py
 #!/usr/local/bin/python
 #based on https://community.hortonworks.com/articles/36031/sample-code-to-automate-interacting-with-zeppelin.html by Ali Bajwa
+import time
 def post_request(url, body):
   import json, urllib2
   encoded_body = json.dumps(body)
@@ -113,9 +110,10 @@ for body in data['body']:
 shbody['properties']['shell.command.timeout.millisecs'] = '3000000'
 post_request(zeppelin_int_url + shbody['id'], shbody)
 
+#time.sleep(120)
 my_dict = {'groupArtifactVersion':  'org.apache.spark:spark-streaming-kafka-0-8_2.11:2.1.0',       'local': False}
 sparkbody['dependencies'].append(my_dict)
-post_request(zeppelin_int_url + sparkbody['id'], sparkbody)
+#post_request(zeppelin_int_url + sparkbody['id'], sparkbody)
 EOF
 #cat /tmp/sh_settings.py
 python /tmp/sh_settings.py

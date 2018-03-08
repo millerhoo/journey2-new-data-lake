@@ -71,8 +71,7 @@ mkdir /tmp/notebooks
 cd /tmp/notebooks
 wget -nc https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/Notes.zip
 unzip Notes.zip
-sed -i -- "s~swift://\$CONTAINER.default~$objectStoreURL~g" *.json
-sed -i -- "s~swift://journeyC.default~$objectStoreURL~g" *.json
+sed -i -- "s/journeyC/$default_container/g" *.json
 for note in /tmp/notebooks/*.json
 do
   echo $note
