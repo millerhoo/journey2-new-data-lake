@@ -2,40 +2,20 @@
 
 echo "Running bootstrap for Big Data User Journeys"
 
-# check if we are root.  otherwise, exit
-euid=`id -u`
-if [ $euid -ne 0 ]; then
-  echo "This script must be run as root."
-  exit 1
-fi
-
-
-# detect if this is being run by hand or as part of instance creation
-# if part of instance creation, this file will live at /u01/app/oracle/tools/bdce/bdcsce/impl-20/vm-scripts
-
-echo "Command being run: $0"
-DIRNAME=`dirname $0`
-BASENAME=`basename $0`
-BASEDIR=$(cd "$DIRNAME" ; pwd)
-
-if [ ${BASEDIR} = "/u01/app/oracle/tools/bdce/bdcsce/impl-20/vm-scripts" ]
-then
-  echo This is being run automatically.
+# check to see if we are running this manually (DOMAINID will be set)
+#if [[ -z "$DOMAINID" ]]
+#then
+#  echo Did not detect DOMAINID.  This is being run automatically.
+  default_container=$(getDefaultContainer)
   objectStoreURL=$(getBaseObjectStoreUrl)
-else
-  echo This is being run manually.
-  BASEDIR=/u01/app/oracle/tools/bdce/bdcsce/impl-20/vm-scripts
-  source ${BASEDIR}/constants.sh
-  source ${BASEDIR}/bdcsce_bootstrap_helper.sh --source_only
-  objectStoreURL=$(getBaseObjectStoreUrl)
-fi
-
-
-# download latest bootstrap to be sure we use it (this section is work in progress)
-cd /tmp
-wget -nc https://github.com/millerhoo/journey2-new-data-lake/releases/download/v1.0.1/bootstrap.zip
-# todo: unzip.  exit this script.  run the downloaded one.
-
+#else
+#  echo Detected DOMAINID=$DOMAINID.  This is being run manually.
+# NOTE WE NO LONGER SUPPORT RUNNING THIS MANUALLY.  TOO MANY POTENTIAL USER ERRORS.  JUST FOLLOW THE INSTRUCTIONS AND CREATE A NEW BDC INSTANCE
+#  echo CONTAINER=$CONTAINER
+#  default_container=$CONTAINER
+#  default_full_container=Storage-$DOMAINID/$CONTAINER
+#  objectStoreURL=swift://$CONTAINER.default
+#fi
 
 
 #  setup sudo for zeppelin
@@ -46,15 +26,7 @@ tail -10 /etc/sudoers
 
 
 
-## do this section only on 1 zeppelin server
-# for now, just do it on the first Ambari server
-_HOSTNAME=$(hostname -f)
- 
-for i in $(getAmbariServerNodes); do
-  if [ ${_HOSTNAME} = $i ]; then
-    echo "running singleton Zeppelin section"
-	
-	
+
 
 # delete 2 sample notebooks as we have newer ones
 echo "Deleting 2 sample notebooks as we provide newer ones"
@@ -93,7 +65,7 @@ echo "importing lab notebooks"
 mkdir /tmp/notebooks
 cd /tmp/notebooks
 wget -nc https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/Notes.zip
-unzip -f Notes.zip
+unzip Notes.zip
 sed -i -- "s~swift://\$CONTAINER.default~$objectStoreURL~g" *.json
 sed -i -- "s~swift://journeyC.default~$objectStoreURL~g" *.json
 for note in /tmp/notebooks/*.json
@@ -104,7 +76,7 @@ done
 
 # fix sh interpreter timeout and spark kafka dependency
 # https://zeppelin.apache.org/docs/0.7.0/rest-api/rest-interpreter.html
-echo "fixing sh interpreter timeout"
+echo "fixing sh interpreter timeout and spark kafka dependency"
 cat <<EOF > /tmp/sh_settings.py
 #!/usr/local/bin/python
 #based on https://community.hortonworks.com/articles/36031/sample-code-to-automate-interacting-with-zeppelin.html by Ali Bajwa
@@ -145,16 +117,6 @@ sparkbody['dependencies'].append(my_dict)
 EOF
 #cat /tmp/sh_settings.py
 python /tmp/sh_settings.py
-
-	
-
-	
-## still part of the do this section only on 1 zeppelin server	
-  fi
-  break
-done
-## end of the do this section only on 1 zeppelin server	
-  
 
 #  clean yum
 echo "cleaning up yum metadata just in case"
