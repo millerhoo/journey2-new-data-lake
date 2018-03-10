@@ -1,19 +1,19 @@
 # Instructions to run the bootstrap.sh script manually
 
-Updated: August 16, 2017
+Updated: March 9, 2018
 
 ## Introduction
 
 The New Data Lake journey provides instructions in [Lab 100 Start Here](LabGuide100StartHere.md) that specify a bootstrap.sh script to use when the BDCS-CE instance is provisioned.  This bootstrap.sh does a number of key configuration steps for the journey, including populated the needed Zeppelin notebooks.
 
-For a variety of reasons (which in 17.3 includes bug 25995652), the bootstrap.sh script might not end up being run correctly.  This document provides instructions on how to do this manually.
+While we recommend you follow the Lab100 instructions, this document provides instructions on how to do run the bootstrap script manually.
 
 
 # Steps
 
-## Open up network Access to your BDCS-CE instance for SSH
+## Open up network Access to your BDCS-CE instance for SSH (OCI-Classic)
 
-Our first step is to enable network access to our BDCS-CE server via the SSH protocol.  You will do this from the BDCS-CE Service Console.  Here are the steps:
+Our first step is to enable network access to our BDCS-CE server via the SSH protocol.  You will do this from the BDCS-CE Service Console.  Here are the steps (these steps are for OCI-Classic.  For OCI, SSH ports should already be open by default):
 
  + From the BDCS-CE Service Console, navigate to Access Rules for your BDCS-CE instance.  
 
@@ -49,55 +49,19 @@ Next, Windows users will specify the location of the private key (in .ppk format
 ![ssh](images/300/snap0011403.jpg)
 
 
-## Now copy ..
-set variables for your DOMAINID and CONTAINER.  Be sure to use your DOMAINID (it won't be gse000012345) and CONTAINER (it may be journeyC or you may have changed it)
-
-
-    export DOMAINID=gse000012345
-    #YOU NEED TO EDIT THE ABOVE
-
-    export CONTAINER=journeyC  
-    #YOU MAY NEED TO EDIT THE ABOVE
-
-## copy and paste this into SSH (hint: in putty, right-click does a paste)
+## Now run these commands (hint: in putty, right-click does a paste)
 When you run this, it will take a few minutes so please be patient.
 
-    cat << EOF > /tmp/bootstrap_fix.sh
-    #!/bin/bash
-    #get input
-    echo "Enter your domain id (example: gse000001345) : "
-    read DOMAINID
-    echo "Enter your Container name (example: journeyC) : "
-    read CONTAINER
-    echo DOMAINID=\$DOMAINID
-    export DOMAINID
-    echo CONTAINER=\$CONTAINER
-    export CONTAINER
-    echo "Are you absolutely sure these are correct?  No mis-spelling.  Case is correct.  No missing digits.  Enter YES (uppercase) if you are absolutely sure"
-    read ANSWER
-    if [ "\$ANSWER" == "YES" ]
-    then
-      echo "User confirms input is correct"
-    else
-      echo "ABORTING.  TRY AGAIN.  DO NOT CONTINUE.  DO NOT PASS GO"
-      exit 1
-    fi
-    #fix core-site.xml
-    sed -i -- "s/storage.us2.oraclecloud/\$DOMAINID.storage.oraclecloud/g" /etc/hadoop/conf/core-site.xml
-    #download bootstrap.sh
-    cd /tmp
-    rm bootstrap.sh
+    sudo bash
     wget -nc https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/100/bootstrap.sh
-    #run bootstrap.sh
-    chmod a+x bootstrap.sh
+    chmod u+x bootstrap.sh
     ./bootstrap.sh
-    EOF
-    #run our bootstrap_fix.sh script 
-    chmod a+x /tmp/bootstrap_fix.sh
-    cat /tmp/bootstrap_fix.sh
-    echo running bootstrap.  this will take a few minutes.
-    sudo /tmp/bootstrap_fix.sh
-    echo done
+    echo "done"
+
+## If you have a multi-node cluster, repeat these steps on each node.
+If you have more than 1 node in your cluster, repeat these steps for the other nodes.
+
+
 
 
 ## Begin Your Big Data Journey

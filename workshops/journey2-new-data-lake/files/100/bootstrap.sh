@@ -93,7 +93,7 @@ echo "importing lab notebooks"
 mkdir /tmp/notebooks
 cd /tmp/notebooks
 wget -nc https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/Notes.zip
-unzip -f Notes.zip
+unzip -o Notes.zip
 sed -i -- "s~swift://\$CONTAINER.default~$objectStoreURL~g" *.json
 sed -i -- "s~swift://journeyC.default~$objectStoreURL~g" *.json
 for note in /tmp/notebooks/*.json
