@@ -27,7 +27,7 @@ The New Data Lake workshop will use a series of tutorials running in Zeppelin No
 **To see a video overview of the New Data Lake, watch this link:** [Video](http://www.youtube.com/embed/Sj-PlJ-w1jA?rel=0?iframe=true&width=680&height=450)
 
 ## To learn more
- - [Big Data Cloud Service - Compute Edition (BDCS-CE)](https://cloud.oracle.com/big-data-compute-edition)
+ - [Big Data Cloud (BDC)](https://cloud.oracle.com/big-data-cloud)
  - [Event Hub Cloud Service (OEHCS)](https://cloud.oracle.com/en_US/event-hub)
  - [Storage Cloud Service Object Store](https://cloud.oracle.com/en_US/storage)
 
@@ -45,32 +45,32 @@ The New Data Lake workshop will use a series of tutorials running in Zeppelin No
 
 
 
-## Workshop Details
+# Workshop Details
 
-**Reference the following Lab Guides by opening their Documentation Files:**
+**Reference the following Lab Guides by opening their Documentation links**
 
-## Lab 100: START HERE
+## Lab 100: Provisioning (START HERE)
 
-**Documenation**: [LabGuide100StartHere.md](LabGuide100StartHere.md)
-
-**Objectives**:
-
-- Provision a Big Data Cloud Service - Compute Edition (BDCS-CE) environment for use with this Journey
-
-## Lab 200: Getting to know BDCS-CE
-
-**Documenation**: [LabGuide200.md](LabGuide200.md)
+**Documentation**: [LabGuide100StartHere.md](LabGuide100StartHere.md)
 
 **Objectives**:
 
-- Accessing your BDCS-CE instance
+- Provision a Big Data Cloud environment for use with this Journey
+
+## Lab 200: Getting to know Big Data Cloud
+
+**Documentation**: [LabGuide200.md](LabGuide200.md)
+
+**Objectives**:
+
+- Accessing your BDC instance
 - Working with Zeppelin Notebooks
 - Working with Hive
 - Working with Oracle Storage Cloud Object Store
 
-## Lab 300: More BDCS-CE
+## Lab 300: More Big Data Cloud
 
-**Documenation**: [LabGuide300.md](LabGuide300.md)
+**Documentation**: [LabGuide300.md](LabGuide300.md)
 
 **Objectives**:
 
@@ -79,20 +79,20 @@ The New Data Lake workshop will use a series of tutorials running in Zeppelin No
 
 ## Lab 400:  Provisioning Oracle Event Hub Cloud Service (OEHCS)
 
-**Documenation**: [LabGuide400.md](LabGuide400.md)
+**Documentation**: [LabGuide400.md](LabGuide400.md)
 
 **Objectives**:
 
 - Provisioning the OEHCS Platformn instance
 - Creating your first OEHCS topic
 
-## Lab 500:  Working with OEHCS and BDCS-CE and Spark Streaming
+## Lab 500:  Working with OEHCS and BDC and Spark Streaming
 
-**Documenation**: [LabGuide500.md](LabGuide500.md)
+**Documentation**: [LabGuide500.md](LabGuide500.md)
 
 **Objectives**:
 
-- Configuring Access between BDCS-CE and OEHCS instances
+- Configuring Access between BDC and OEHCS instances
 - Writing a Producer for OEHCS in Zeppelin
 - Writing a Spark Streaming Consumer for OEHCS
 - Use Spark SQL with Streaming data

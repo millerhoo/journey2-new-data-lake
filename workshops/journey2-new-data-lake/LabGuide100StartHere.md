@@ -3,12 +3,13 @@
 Updated: March 8, 2018 for BDC Version 18.1.4
 
     
+# Lab 100 : Provisioning Oracle Big Data Cloud
 
 ## Introduction
 
 In this lab, you learn how to provision a **Oracle Big Data Cloud (BDC)** cluster.  
 
-The Oracle Big Data Cloud Service - Compute Edition (BDC) enables you to rapidly, securely, and cost-effectively leverage the power of an elastic, integrated Big Data Infrastructure to unlock the value in Big Data.   In this lab, we will walk you through the steps to quickly configure and create a Big Data Cloud Service instance.  When done you will see how to view the configuration and layout of your instance using the Oracle Big Data Console.  
+The Oracle Big Data Cloud (BDC) enables you to rapidly, securely, and cost-effectively leverage the power of an elastic, integrated Big Data Infrastructure to unlock the value in Big Data.   In this lab, we will walk you through the steps to quickly configure and create a Big Data Cloud instance.  When done you will see how to view the configuration and layout of your instance using the Oracle Big Data Console.  
 
 Please direct comments to: David Bayard (david.bayard@oracle.com)
 
@@ -16,20 +17,20 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 - Get access to the Oracle Public Cloud
 - Learn how to upload a file to the Oracle Storage Cloud Object Store
-- Learn how to provision a BDCS-CE instance
-- Learn how to access your BDCS-CE instance
+- Learn how to provision a BDC instance
+- Learn how to access your BDC instance
 
 # Get access to the Oracle Public Cloud
 
 Your first step is to get access to the Oracle Public Cloud.  There are a couple of ways:
 
-+ You may already have access to an the Oracle Public Cloud environment.  Provided that you have the ability to create new instances of Big Data Cloud Service Compute Edition (BDCS-CE) and Oracle Event Hub Cloud Service (OEHCS) as well as the ability to upload files to the Storage Cloud, then you should be able to use your exisitng environment.
++ You may already have access to an the Oracle Public Cloud environment.  Provided that you have the ability to create new instances of Big Data Cloud Service Compute Edition (BDC) and Oracle Event Hub Cloud Service (OEHCS) as well as the ability to upload files to the Storage Cloud, then you should be able to use your exisitng environment.
 + If you are a customer or prospect, you can sign-up for the free $300 Trial Account.  Please refer to the instructions here: [$300 Trial](xtra300Trial.md)
 + If you are an Oracle employee, you can request a temporary environment from the GSE demo.oracle.com website.  Please refer to the instructions here: [Employee GSE request](xtraGSErequest.md)
 
 In any case, follow one of the above approaches to obtain access to an Oracle Public Cloud account with the ability (and quota) to create new instances.
 
-# A note about Oracle Cloud Infrastructure and Oracle Cloud Infrastructure Classic
+## A note about Oracle Cloud Infrastructure and Oracle Cloud Infrastructure Classic
 
 Assuming your cloud account allows it, Oracle Big Data Cloud can be deployed to both OCI and OCI-Classic data centers.  This journey was originally built against Oracle Cloud Infrastructure Classic, but it does work with OCI as well.
 
@@ -39,20 +40,22 @@ These provisioning instructions have not been updated for OCI, so the screenshot
 
 If you do use OCI, you'll be using the OCI Object Storage service which is distinct from the OCI-Classic Object Store.  The instructions in this document show you how to upload the bootstrap.sh script to the OCI-Classic Object Store.  If using OCI, you'll need to instead use the OCI Console to create a "journeyC" bucket in the OCI Object Store and upload the bootstrap.sh to the "bdcsce/bootstrap/bootstrap.sh" location prior to creating your BDC instance.  You'll also need to complete the pre-requisite steps for running PAAS services in OCI (https://docs.us-phoenix-1.oraclecloud.com/Content/General/Reference/PaaSprereqs.htm).
 
-# Know your identity domain
+## Know your identity domain
 
 Write down the name of your Identity Domain in a document as you will need it later: 
 ![](images/100/snap0012186.jpg) 
 
 + Hint: you should also write down the data center if you have it (for instance, "US Commerical 2")
 
-# Create a container in the Storage Cloud and upload a file
+# Section1: Create a container in the Storage Cloud and upload a file
 
-Next, we will create a container in the Storage Cloud to hold the files and data used by this workshop.  This container will be the "default" container used by the BDCS-CE instance we will create.  And we will upload to this container a special "bootstrap.sh" file that will be used to customize our BDCS-CE instance as it is provisioned.
+Next, we will create a container in the Storage Cloud to hold the files and data used by this workshop.  This container will be the "default" container used by the BDC instance we will create.  And we will upload to this container a special "bootstrap.sh" file that will be used to customize our BDC instance as it is provisioned.
 
 If you are using OCI (instead of OCI-Classic), be sure to to read the note above about OCI and OCI-Classic as the instructions in this section do not apply to OCI.
 
 ## Create a new Storage Cloud Object Store container
+
+## Steps
 
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 
@@ -92,6 +95,8 @@ You are advised to name your container "journeyC" (case-sensitive), but the labs
 
 ## Upload the bootstrap.sh file to the container
 
+## Steps
+
 ### **STEP 1**: Download the bootstrap.zip file to your computer, unzip it, and save the bootstrap.sh file in a directory you can easily find.
 
 Download the bootstrap.zip file from here: [https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/100/bootstrap.zip](https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/100/bootstrap.zip)
@@ -123,6 +128,8 @@ Note: In some cases, there may not be a My Services link in upper right of the S
 
 ## Provision BDC
 
+## Steps
+
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 
 ![](images/300/snap0011988.jpg) 
@@ -150,7 +157,7 @@ Note: In some cases, there may not be a My Services link in upper right of the S
 
 ![](images/100/BDCSCE_Aug_creation1.gif)  
 
-### **STEP 6**: In the Credentials section, define your SSH public key and the desired username/password to use for the BDCS-CE cluster administrator.
+### **STEP 6**: In the Credentials section, define your SSH public key and the desired username/password to use for the BDC cluster administrator.
 
 - **Use IDCS (Identity Management)**: The instructions were written assuming you are NOT using IDCS, but the journey should work fine if you do select to use IDCS.  There are a few differences- mostly around connecting to Hive/Spark via JDBC- but we will try to document them in the appropriate places.  Currently, this option only appears in OCI-Classic data centers.
 - **SSH Public Key**: There are various approaches you can use.  You can define a value for a VM Public Key, use a file with a VM Public Key or create a new key.
@@ -189,7 +196,7 @@ Note: In some cases, there may not be a My Services link in upper right of the S
 
 ![](images/100/snap0012193.jpg)  
 
-### **STEP 11**: Wait for the BDCS-CE instance to be provisioned.
+### **STEP 11**: Wait for the BDC instance to be provisioned.
 
 - While being provisioned, the Status will say "Creating service".  You can click on the status to get more information.
 - As of 17.3.3-20, it can take about 15-20 minutes to finish creating the service.
@@ -197,7 +204,7 @@ Note: In some cases, there may not be a My Services link in upper right of the S
 - If you entered a valid email address, you will get an email the instance provisioning is finished:
 ![](images/200/snap0012142.jpg)  
 
-### **STEP 12**: When the BDCS-CE instance is provisioned (the status is Ready), click on the name of the instance to go to the Service Overview page.
+### **STEP 12**: When the BDC instance is provisioned (the status is Ready), click on the name of the instance to go to the Service Overview page.
 ![](images/100/snap0012199.jpg)  
 
 ### **STEP 13**: Review the details on the Service Overview Page
@@ -207,7 +214,7 @@ Sections include:
 - **Service Overview** – displays summary information of the new Big Data Cloud Service.  This includes the Ambari Server Host whose IP address you can use to access Ambari from a URL in a browser.  As well as highlighting the Administrative user you created as well as the Cloud Storage Container and the Spark Thrift Server (part of the default configuration).  
   - Ambari is a Hadoop management web UI that can accessed through your Ambari Host Server IP address and port 8080 (ex:  http://xxx.xxx.xxx.xxx:8080).  Ambari is not covered in this Lab, but feel free to explore it on your own.
   - Note: to use Ambari, you will need to enable a Network Access rule for port 8080.
-  - Your Ambari credentials will be your BDCS-CE username and password you defined when you created this instance. 
+  - Your Ambari credentials will be your BDC username and password you defined when you created this instance. 
 - **Resources** – displays information on the resources associated with your Service.  As you scale out and add more nodes, the new nodes as well as their Public IP address, OCPUs, Memory and Storage will be displayed.
 - **Associations** – displays information on any additional resources associated with your Service.  Associations will automatically setup the necessary network Access Rules between services. 
 
@@ -220,8 +227,8 @@ For now, you don't need to make changes to the default Access Rules.  In a later
 ![](images/200/AccessRules.gif)  
 
 ### **STEP 16**: Access the Big Data Cluster Console
-- Launch the Big Data Cluster Console for your BDCS-CE cluster.  If this is your first time, you will likely need to allow your browser to accept the self-signed certificate for the web console application.
-- You will be asked to provide a username/password.  Use the username and password you defined earlier when you created the BDCS-CE instance (the username defaults to bdcsce_admin).  
+- Launch the Big Data Cluster Console for your BDC cluster.  If this is your first time, you will likely need to allow your browser to accept the self-signed certificate for the web console application.
+- You will be asked to provide a username/password.  Use the username and password you defined earlier when you created the BDC instance (the username defaults to bdcsce_admin).  
 ![](images/100/BDCSCE_Aug_creation4.gif) 
 
 ### **STEP 17**: Record the web URL of the Big Data Cluster Console in your document
@@ -229,9 +236,9 @@ For now, you don't need to make changes to the default Access Rules.  In a later
 
 # What you Learned
 
-- Learned how to provision a BDCS-CE instance
-- Learned how to access BDCS-CE
+- Learned how to provision a BDC instance
+- Learned how to access BDC
 
-# Next Steps
+## Next Steps
 
-- Proceed to the next Lab to learn how to use BDCS-CE's notebook and services like Hive, Spark, and SparkSQL.
+- Proceed to the next Lab to learn how to use BDC's notebook and services like Hive, Spark, and SparkSQL.
