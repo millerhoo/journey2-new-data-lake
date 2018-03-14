@@ -31,6 +31,8 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 # Connect to the BDC Console
 
+## Steps
+
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 
 ![](images/300/snap0011988.jpg) 
