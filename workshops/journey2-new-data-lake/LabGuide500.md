@@ -1,6 +1,8 @@
 ![](images/500/500.JPG)  
 Updated: December 20, 2017 for BDC Version 17.4.6
 
+# Lab: Event Hub Cloud Service with Big Data Cloud
+
 ## Introduction
 
 In this lab, you will learn how to stream data into **Oracle Event Hub Cloud Service (OEHCS)** and process it with **Spark Streaming** on **Oracle Big Data Cloud**.  
@@ -27,7 +29,7 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 - You completed Lab 200 Getting to know BDC, Lab 300 More BDC, and Lab 400 OEHCS Provisioning
 
 
-## Connect to the BDC Console
+# Connect to the BDC Console
 
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 

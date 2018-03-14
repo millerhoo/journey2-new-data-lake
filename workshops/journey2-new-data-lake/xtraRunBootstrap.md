@@ -24,19 +24,14 @@ Our first step is to enable network access to our BDCS-CE server via the SSH pro
 
 Now that the network access is setup, we will proceed to connect to the BDCS-CE server via SSH.  
 
-
-
-### If you do not know how to connect to BDCS-CE via SSH and private keys, you can review the documentation here:
+If you do not know how to connect to BDCS-CE via SSH and private keys, you can review the documentation here:
 
 + Navigate to the product documentation at <http://docs.oracle.com/cloud/latest/big-data-compute-cloud/bigdata-compute-cloud-tasks.html> .  
 + Click “Tasks” in the navigation bar on the left hands side of the screen.  
 + Then click the “Connect to a node through SSH” topic under the “Access the Service” category.
 ![ssh](images/300/SSH.gif)
 
-**Note: if you are using Windows, we have included some Windows instructions here (they might be easier to follow then the more generic documentation above):**
-
-
-#### Instructions for Windows Users: 
+### Instructions for Windows Users: 
 Windows users typically use Putty for SSH.  If you generated a private key via the web console during BDCS-CE instance creation, the downloaded private key will be in openSSH format, which can not be used directly with Putty.  Therefore, you will need to run the puttygen command (which gets installed with Putty) on your private key to convert it to ppk format.  Here is an example:
 
 ![ssh1](images/300/PuttyPrivateKey.gif)

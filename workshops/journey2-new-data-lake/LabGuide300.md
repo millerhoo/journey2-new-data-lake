@@ -1,6 +1,8 @@
 ![](images/300/300.JPG)  
 Updated: December 20, 2017 for BDC Version 17.4.6
 
+# Lab: More about Big Data Cloud
+
 ## Introduction
 
 This lab will walk you through additional features of **Oracle Big Data Cloud**.  
@@ -22,7 +24,9 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 
 
-## Connect to the BDC Console
+# Connect to the BDC Console
+
+## Steps 
 
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 
@@ -58,9 +62,7 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 ![](images/300/snap0012206.jpg)
 
-## OPTIONAL: Open and run Tutorials 4b and 4c in the notebook
-
-These optional tutorials show you how to add additional datasets (such as weather) and then start to visualize them with Oracle Data Visualization Desktop
+## Open and run Tutorials 4b and 4c in the notebook
 
 ### **STEP 1**: Click on the Notebook tab. Expand the Journeys folder.  Then expand the New Data Lake folder. Then click on the Tutorial 4b Adding more datasets tutorial to open it. 
 

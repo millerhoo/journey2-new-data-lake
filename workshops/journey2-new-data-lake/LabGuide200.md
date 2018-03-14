@@ -1,13 +1,15 @@
 ![](images/200/200.JPG)  
 Updated: December 20, 2017 for BDC Version 17.4.6
 
+# Lab 200: Getting to know Big Data Cloud
+
 ## Introduction
 
 This lab will walk you through getting to know **Oracle Big Data Cloud (BDC)**, also known as Oracle Big Data Cloud Service - Compute Edition (BDCS-CE).  
 
 You will use the Notebook feature of BDC to run a series of tutorials that show you different aspects of functionality.  In this lab, you will learn how to work with the **Zeppelin Notebook**.  You will also be introduced to the New York City Citi Bike dataset that we will use for experimentation.  You will see how we can download some sample data and upload it to the **Oracle Cloud Storage Object Store**.  And finally, another tutorial will show you how to interact with **Hive**.   
 
-Notebooks are used to explore and visualize data in an iterative and easily documented fashion. Oracle Big Data Cloud Service - Compute Edition uses Apache Zeppelin as its notebook interface and coding environment.  Information about Zeppelin can be found here: [https://zeppelin.apache.org/](https://zeppelin.apache.org/) .  To see examples of notes created and shared by other Zeppelin users, see [https://www.zeppelinhub.com/viewer](https://www.zeppelinhub.com/viewer) .
+Notebooks are used to explore and visualize data in an iterative and easily documented fashion. Oracle Big Data Cloud Service - Compute Edition uses Apache Zeppelin as its notebook interface and coding environment.  Information about Zeppelin can be found here: [https://zeppelin.apache.org/](https://zeppelin.apache.org/) .  
 
 Please direct comments to: David Bayard (david.bayard@oracle.com)
 
@@ -22,7 +24,9 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 - A running BDC instance and Storage Cloud Object Store instance, created as per the instructions in lab 100.  These instructions included the use of a special "bootstrap.sh" script which sets up the BDC environment for this workshop.
 
-## Connect to the BDC Console
+# Connect to the BDC Console
+
+## Steps
 
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 

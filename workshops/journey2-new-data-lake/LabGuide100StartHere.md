@@ -55,8 +55,6 @@ If you are using OCI (instead of OCI-Classic), be sure to to read the note above
 
 ## Create a new Storage Cloud Object Store container
 
-## Steps
-
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 
 
@@ -95,8 +93,6 @@ You are advised to name your container "journeyC" (case-sensitive), but the labs
 
 ## Upload the bootstrap.sh file to the container
 
-## Steps
-
 ### **STEP 1**: Download the bootstrap.zip file to your computer, unzip it, and save the bootstrap.sh file in a directory you can easily find.
 
 Download the bootstrap.zip file from here: [https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/100/bootstrap.zip](https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/100/bootstrap.zip)
@@ -127,8 +123,6 @@ Note: In some cases, there may not be a My Services link in upper right of the S
 # Provision a new BDC Instance
 
 ## Provision BDC
-
-## Steps
 
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 

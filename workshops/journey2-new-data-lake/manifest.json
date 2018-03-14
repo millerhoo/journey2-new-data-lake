@@ -8,25 +8,25 @@
                 "number": "0",
                 "filename": "README.md",
                 "title": "Read Me First",
-                "description": "Workshop Overview"
+                "description": "New Data Lake Workshop Overview"
             },
             {
                 "number": "100",
                 "filename": "LabGuide100StartHere.md",
                 "title": "Lab 100: START HERE - Provisioning",
-                "description": "Instructions to provision Oracle Big Data Cloud Service - Compute Edition (BDCS-CE) in your Oracle Public Cloud identity domain"
+                "description": "Instructions to provision Oracle Big Data Cloud (BDC) in your Oracle Public Cloud identity domain"
             },
             {
                 "number": "200",
                 "filename": "LabGuide200.md",
-                "title": "Lab 200: Getting to know BDCS-CE",
-                "description": "This lab will help you get to know BDCS-CE.  It will use the Notebook component and show you how to use the basic features (object store, hive) you'll need as you build your New Data Lake."
+                "title": "Lab 200: Getting to know BDC",
+                "description": "This lab will help you get to know BDC.  It will use the Notebook component and show you how to use the basic features (object store, hive) you'll need as you build your New Data Lake."
             },
             {
                 "number": "300",
                 "filename": "LabGuide300.md",
-                "title": "Lab 300: More BDCS-CE",
-                "description": "This lab will help you get to know more BDCS-CE.  It will show you how to use more key features (spark, spark sql) with your New Data Lake."
+                "title": "Lab 300: More BDC",
+                "description": "This lab will help you get to know more BDC.  It will show you how to use more key features (spark, spark sql) with your New Data Lake."
             },
             {
                 "number": "400",
@@ -37,8 +37,8 @@
             {
                 "number": "500",
                 "filename": "LabGuide500.md",
-                "title": "Lab 500: OEHCS with BDCS-CE",
-                "description": "This lab will demonstrate how to combine OEHCS with BDCS-CE via Spark Streaming.  This can help you add real-time streaming data to your New Data Lake."
+                "title": "Lab 500: OEHCS with BDC",
+                "description": "This lab will demonstrate how to combine OEHCS with BDC via Spark Streaming.  This can help you add real-time streaming data to your New Data Lake."
             },
             {
                 "number": "950",

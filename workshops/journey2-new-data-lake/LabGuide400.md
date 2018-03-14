@@ -1,6 +1,8 @@
 ![](images/400/400.JPG)  
 Updated: July 28, 2017 for OEHCS 0.10.2
 
+# Lab: Provisioning Oracle Event Hub Cloud Service
+
 ## Introduction
 
 This lab will walk you through provisioning an instance of **Oracle Event Hub Cloud Service (OEHCS)**.  
@@ -19,7 +21,7 @@ The Oracle Event Hub Cloud Service is a managed Platform as a Service (PaaS) clo
  + Choose different cluster configurations depending on your needs.
  + Use open REST APIs and CLIs to manage, use, and extend the service.
 
-Documentation for OEHCS can be found here: <http://docs.oracle.com/cloud/latest/event-hub-cloud/index.html>.  General info about Apache Kafka can be found here: <https://kafka.apache.org/>.
+Documentation for OEHCS can be found here: <http://docs.oracle.com/cloud/latest/event-hub-cloud/index.html> .  General info about Apache Kafka can be found here: <https://kafka.apache.org/> .
 
 Please direct comments to: David Bayard (david.bayard@oracle.com)
 
