@@ -55,6 +55,15 @@ for i in $(getAmbariServerNodes); do
     echo "running singleton Zeppelin section"
 	
 	
+# download Journey notebooks
+echo "downloading lab notebooks"
+mkdir /tmp/notebooks
+cd /tmp/notebooks
+wget -nc https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/Notes.zip
+
+# make sure not to use proxy server for this stuff
+export no_proxy='127.0.0.1'
+export NO_PROXY='127.0.0.1'
 
 # delete 2 sample notebooks as we have newer ones
 echo "Deleting 2 sample notebooks as we provide newer ones"
@@ -86,13 +95,9 @@ for body in data['body']:
 EOF
 python /tmp/delete_notebooks.py
 
-
 # import notebooks
 # https://zeppelin.apache.org/docs/0.7.0/rest-api/rest-notebook.html#import-a-note
 echo "importing lab notebooks"
-mkdir /tmp/notebooks
-cd /tmp/notebooks
-wget -nc https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/Notes.zip
 unzip -o Notes.zip
 sed -i -- "s~swift://\$CONTAINER.default~$objectStoreURL~g" *.json
 sed -i -- "s~swift://journeyC.default~$objectStoreURL~g" *.json
@@ -164,6 +169,7 @@ yum clean metadata
 echo "installing mlocate"
 yum install -y mlocate
 updatedb
+
 
 echo "done with bootstrap for Big Data User Journeys"
 

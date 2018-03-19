@@ -86,6 +86,12 @@ echo "Setting up zeppelin config file"
 sudo -u oracle cp $thirdparty_root/zeppelin-${zeppelin_version}-bin-all/conf/zeppelin-site.xml.template $thirdparty_root/zeppelin-${zeppelin_version}-bin-all/conf/zeppelin-site.xml
 sed -i -- "s/8080/9090/g" $thirdparty_root/zeppelin-${zeppelin_version}-bin-all/conf/zeppelin-site.xml
 
+# patching to fix JDBC performance issue due to autocompletion (see bottom of this file)
+wget -nc https://issues.apache.org/jira/secure/attachment/12874854/zeppelin-jdbc-0.7.2.jar
+mv /opt/thirdparty/zeppelin-0.7.0-bin-all/interpreter/jdbc/zeppelin-jdbc-0.7.0.jar /opt/thirdparty/zeppelin-0.7.0-bin-all/interpreter/jdbc/zeppelin-jdbc-0.7.0.jar.orig
+cp zeppelin-jdbc-0.7.2.jar /opt/thirdparty/zeppelin-0.7.0-bin-all/interpreter/jdbc/
+chown oracle:oracle /opt/thirdparty/zeppelin-0.7.0-bin-all/interpreter/jdbc/zeppelin-jdbc-0.7.2.jar
+
 # start zeppelin
 echo "."
 echo "."
@@ -181,3 +187,24 @@ echo "sudo -u oracle -i $thirdparty_root/zeppelin-${zeppelin_version}-bin-all/bi
 echo "."
 echo "."
 echo "You can now setup SSH tunneling for port 9090.  Then access Zeppelin at http://127.0.0.1:9090/"
+
+# Fix for Oracle performance issue due to autocompletion in JDBC interpreter 0.70
+# https://issues.apache.org/jira/browse/ZEPPELIN-1962
+#1.Copy down the patched version of the zeppelin jdbc interpreter:
+#wget https://issues.apache.org/jira/secure/attachment/12874854/zeppelin-jdbc-0.7.2.jar
+
+#2.Find the current zeppelin jdbc interpreter jar:
+#locate zeppelin-jdbc
+
+#3.Rename the current
+#mv /opt/thirdparty/zeppelin-0.7.0-bin-all/interpreter/jdbc/zeppelin-jdbc-0.7.0.jar /opt/thirdparty/zeppelin-0.7.0-bin-all/interpreter/jdbc/zeppelin-jdbc-0.7.0.jar.orig
+
+#4.Copy the patched version into the same directory
+#cp zeppelin-jdbc-0.7.2.jar /opt/thirdparty/zeppelin-0.7.0-bin-all/interpreter/jdbc/
+#chown oracle:oracle /opt/thirdparty/zeppelin-0.7.0-bin-all/interpreter/jdbc/zeppelin-jdbc-0.7.2.jar
+
+#5.Restart zeppelin
+#sudo -u oracle -i /opt/thirdparty/zeppelin-0.7.0-bin-all/bin/zeppelin-daemon.sh stop
+#sudo -u oracle -i /opt/thirdparty/zeppelin-0.7.0-bin-all/bin/zeppelin-daemon.sh start
+
+#This worked for me, even though my zeppelin is 0.7.0 and I replaced the zeppelin-jdbc with 0.7.2.
