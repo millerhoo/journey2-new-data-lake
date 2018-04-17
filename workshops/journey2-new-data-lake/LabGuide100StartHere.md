@@ -112,6 +112,8 @@ This step copies our bootstrap.sh script into the exact location where it is nee
 
 ![](images/100/StorageBootstrap2.gif) 
 
+**IMPORTANT NOTE: As of 18.1.6, the copy command will give you an error: Problem copying "bootstrap.sh".  If this happens, proceed to Provision a new BDC Instance.  Then once your BDC instance is created, please use the "xtra: Running Bootstrap.sh Manually" [xtraRunBootstrap.md](xtraRunBootstrap.md) instructions before you start Lab 200.**
+
 ### **STEP 4**: IMPORTANT.  Please double-check that you see a file bdcsce/bootstrap/bootstrap.sh in your journey container
 
 ![](images/100/snap0012188.jpg) 
