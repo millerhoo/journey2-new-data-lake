@@ -38,7 +38,7 @@ The choice of OCI or OCI-Classic is made when you provision a new BDC instance. 
 
 These provisioning instructions have not been updated for OCI, so the screenshots and instructions will reflect using OCI-Classic.
 
-If you do use OCI, you'll be using the OCI Object Storage service which is distinct from the OCI-Classic Object Store.  The instructions in this document show you how to upload the bootstrap.sh script to the OCI-Classic Object Store.  If using OCI, you'll need to instead use the OCI Console to create a "journeyC" bucket in the OCI Object Store and upload the bootstrap.sh to the "bdcsce/bootstrap/bootstrap.sh" location prior to creating your BDC instance.  You'll also need to complete the pre-requisite steps for running PAAS services in OCI (https://docs.us-phoenix-1.oraclecloud.com/Content/General/Reference/PaaSprereqs.htm).
+If you do use OCI, you'll be using the OCI Object Storage service which is distinct from the OCI-Classic Object Store.  The instructions in this document show you how to upload the bootstrap.sh script to the OCI-Classic Object Store.  If using OCI, you'll need to instead use the OCI Console to create a "journeyC" bucket in the OCI Object Store and upload the bootstrap.sh to the "bdcsce/bootstrap/bootstrap.sh" location prior to creating your BDC instance.  You'll also need to complete the pre-requisite steps for running PAAS services in OCI ( https://docs.us-phoenix-1.oraclecloud.com/Content/General/Reference/PaaSprereqs.htm ).
 
 ## Know your identity domain
 
