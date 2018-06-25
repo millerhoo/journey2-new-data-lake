@@ -222,10 +222,10 @@ If you don't see a Create Service button, then click on the Instances tab/link f
 ![](images/100/snap0012190.jpg)  
 
 
-### **STEP 4**: Fill in the Service Name, Description, Email and click Next
+### **STEP 4**: Fill in the Service Name, Description, Email, Region, and more and click Next
 - You can choose whatever you want for Service Name.  It is an identifier to help you in case you create more than one BDC cluster.
-- For the Region field, choose an OCI data center region.  You can see your OCI data center region in the upper left of your OCI web console.
-- Once you've picked an OCI Region, the UI will show you a list of Availability Domains.  Pick an appropriate one-- you might pick AD-1 because you know you have availability (as shown in the OCI Service Limits) to create 1 or more VM.Standard1.4 instances for your BDC cluster.
+- For the Region field, choose your OCI data center region.  You can see your OCI data center region in the upper left of your OCI web console.  Do NOT choose "No Preference" as that will likely put you in an OCI-Classic data center.
+- Once you've picked an OCI Region, the UI will show you a list of Availability Domains.  Pick an appropriate one-- you might pick AD-1 because you know you have availability (as shown in the OCI Service Limits) to create 1 or more VM.Standard1.4 instances for your BDC cluster.  The smallest BDC shapes you can use are VM.Standard1.4 or VM.Standard2.2, either of which works for the User Journeys.
 - Once you've picked the Availability Domain, you can now pick the VCN Subnet you created for your compartment.
 - Click Next when you've filled the fields in.
 
@@ -235,7 +235,7 @@ If you don't see a Create Service button, then click on the Instances tab/link f
 - For this workshop, be sure to choose Full for the Deployment Profile.  The Full profile includes components like Hive which are not part of the Basic profile.
 - We suggest you choose the Number of Nodes as 1 as that is sufficient to run the journey.  Keeping the number of nodes small will reduce your costs or allow your trial to last longer.
 - Currently, the examples are built for Spark 2.1 so be sure to select that version.
-- Be sure to also pick a **Compute Shape** for which you have availability as seen in your OCI Service Limits.  For instance, your service limits may have availability for VM.Standard1.4 shapes but not VM.Standard2.2.  So, pick VM.Standard1.4.
+- Be sure to also pick a **Compute Shape** for which you have availability as seen in your OCI Service Limits.  For instance, your service limits may have availability for VM.Standard1.4 shapes but not VM.Standard2.2.  So, pick VM.Standard1.4 in that scenario.
 
 ![](images/100/snap0015943.jpg)  
 
@@ -260,7 +260,7 @@ If you don't see a Create Service button, then click on the Instances tab/link f
 - **OCI Cloud Storage Bucket URL** – This will be of the form: oci://journeyC@gse00014604/ where journeyC can be replaced with the name of the bucket you created and gse00014997 can be replaced with your tenancy name.  You can see the tenancy name in the upper left of your OCI web console.  And you hopefully wrote down the name of your bucket earlier:
 ![](images/100/snap0015931.jpg) 
 
-- **OCI Cloud Storage User OCID** – This will be of the form: ocid1.user.oc1... You wrote down the OCID the user you created earlier:
+- **OCI Cloud Storage User OCID** – This will be of the form: ocid1.user.oc1... You wrote down the OCID of the user you created earlier:
 ![](images/100/snap0015931.jpg) 
 
 - **OCI Cloud Storage PEM Key** – This will be the file called "oci_api_key.pem" which is located in the .oci subdirectory under the Git Bash working directory.  Be sure you don't pick the "public" file- you want the file that does NOT have public in the name.
@@ -286,8 +286,9 @@ If you don't see a Create Service button, then click on the Instances tab/link f
 ### **STEP 11**: Wait for the BDC instance to be provisioned.
 
 - While being provisioned, the Status will say "Creating service".  You can click on the status to get more information.
-- As of 17.3.3-20, it can take about 15-20 minutes to finish creating the service.
+- It can take about 15-20 minutes to finish creating the service.
 ![](images/200/snap0012023.jpg)  
+
 - If you entered a valid email address, you will get an email the instance provisioning is finished:
 ![](images/200/snap0012142.jpg)  
 
