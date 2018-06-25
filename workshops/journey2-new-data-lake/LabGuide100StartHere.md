@@ -32,13 +32,12 @@ In any case, follow one of the above approaches to obtain access to an Oracle Pu
 
 ## A note about Oracle Cloud Infrastructure and Oracle Cloud Infrastructure Classic
 
-Assuming your cloud account allows it, Oracle Big Data Cloud can be deployed to both OCI and OCI-Classic data centers.  This journey was originally built against Oracle Cloud Infrastructure Classic, but it does work with OCI as well.
+Assuming your cloud account allows it, Oracle Big Data Cloud can be deployed to both OCI and OCI-Classic data centers.  These instructions are for Oracle Cloud Infrastructure Classic.  
 
 The choice of OCI or OCI-Classic is made when you provision a new BDC instance.  There will be a Region drop-down on the first page of the BDC Create Instance screen.  If you choose an OCI region, then you'll use OCI.  If you choose "No Preference", you'll use OCI-Classic.
 
-These provisioning instructions have not been updated for OCI, so the screenshots and instructions will reflect using OCI-Classic.
+**If you are using OCI, please jump to these instructions: [LabGuide100StartHereOCI.md](LabGuide100StartHereOCI.md)**
 
-If you do use OCI, you'll be using the OCI Object Storage service which is distinct from the OCI-Classic Object Store.  The instructions in this document show you how to upload the bootstrap.sh script to the OCI-Classic Object Store.  If using OCI, you'll need to instead use the OCI Console to create a "journeyC" bucket in the OCI Object Store and upload the bootstrap.sh to the "bdcsce/bootstrap/bootstrap.sh" location prior to creating your BDC instance.  You'll also need to complete the pre-requisite steps for running PAAS services in OCI ( https://docs.us-phoenix-1.oraclecloud.com/Content/General/Reference/PaaSprereqs.htm ).
 
 ## Know your identity domain
 
