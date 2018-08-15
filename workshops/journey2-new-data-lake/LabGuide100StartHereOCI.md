@@ -1,6 +1,6 @@
 ![](images/100/100.JPG)  
 
-Updated: June 25, 2018 for BDC Version 18.2.6
+Updated: August 15, 2018 for BDC Version 18.3.2
 
     
 # Lab 100 : Provisioning Oracle Big Data Cloud on Oracle Cloud Infrastructure
@@ -109,20 +109,41 @@ Once you login with your Public Cloud credentials, you will see the Oracle Cloud
    ![](images/100/snap0015924.jpg) 
    
 
-### **STEP 8**: Follow the PAAS on OCI Tutorial Section 6 (steps 1-8) to generate API Signing Keys
+### **STEP 8**: Follow the OCI Documentation to generate API Signing Keys
 
-   + You will notice that you are skipping Section 5 in the PAAS on OCI Tutorial as that step is not needed for Big Data Cloud.
+  + Note: we are not following the PAAS tutorial for this step because the PAAS tutorial currently has instructions that create a signing key using a passphrase.  BDC currently requires a signing key without a passphrase.  So, we will follow the OCI documentation for this step.
+
+   + Click <a href="https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#two" target="_blank">here</a> to open up the OCI documentation for How to Generate an API Signing Key.
+    ![](images/100/snap0016607.jpg) 
+
    + If you are using Windows, you will need to download Git Bash to run these commands.  You can download "Git for Windows" from <a href="https://git-scm.com/download/win" target="_blank">here</a>.
    + Once you have installed Git for Windows, you can launch Git Bash from the Start Menu.  You can find Git Bash under the Git folder.
 
    ![](images/100/snap0015925.jpg) 
 
-   ![](images/100/snap0015926.jpg) 
+   + Follow the steps for "How to Generate an API Signing Key"
+   + IMPORTANT: In the second step of the OCI instructions, be sure to use the command to generate the key with no passphrase.
 
-   + Hint: Please only do steps 1 thru 9 of Section 6 from the PAAS on OCI Tutorial.
-   + Hint: you can use the "pwd" command to see where Git Bash is writing its files (so that you can find the .oci folder).
-   + Hint: Keep the Git Bash window open as you will go back and copy some of the existing output later.
-   + Hint: be sure to save the fingerprint.
+   ![](images/100/snap0016608.jpg) 
+
+   + Hint: For the final step, you can leave off the " | pbcopy" part of the command and just copy directly from the text of the Git Bash window.  In other words, instead of running this:
+
+   ![](images/100/snap0016610.jpg) 
+
+run this:
+
+   ![](images/100/snap0016611.jpg) 
+
+
+   + Hint: you can use the "pwd" command to see the working directory where Git Bash is writing its files (so that you can find the .oci folder).
+
+   + Them follow the command for "How to Get the Key's Fingerprint"
+
+   ![](images/100/snap0016609.jpg) 
+
+   + Hint: Keep the Git Bash window open as you will go back and copy some of the existing output later (specifically, you will later copy the output of the "cat ~/.oci/oci_api_key_public.pem" command).
+
+   + Hint: Save the fingerprint (and the public key oci_api_key_public.pem contents, too) in your notepad.
 
    ![](images/100/snap0015927.jpg) 
 
