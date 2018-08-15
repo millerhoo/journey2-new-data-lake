@@ -57,7 +57,7 @@ For reference, the basic steps are documented here: https://docs.us-phoenix-1.or
 In particular, there is a good tutorial available here: http://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/javaservice/JCS/oci-prerequisites/oci-prerequisites.html
 
 
-## Navigate to the OCI web console
+## Setup the BDC pre-requisites on OCI
 
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 
@@ -135,13 +135,13 @@ run this:
    ![](images/100/snap0016611.jpg) 
 
 
-   + Hint: you can use the "pwd" command to see the working directory where Git Bash is writing its files (so that you can find the .oci folder).
-
    + Them follow the command for "How to Get the Key's Fingerprint"
 
    ![](images/100/snap0016609.jpg) 
 
    + Hint: Keep the Git Bash window open as you will go back and copy some of the existing output later (specifically, you will later copy the output of the "cat ~/.oci/oci_api_key_public.pem" command).
+   + Hint: you can use the "pwd" command to see the working directory where Git Bash is writing its files (so that you can find the .oci folder).
+   
 
    + Hint: Save the fingerprint (and the public key oci_api_key_public.pem contents, too) in your notepad.
 
